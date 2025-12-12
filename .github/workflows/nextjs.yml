@@ -65,35 +65,20 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
-        run: | 
-          ${{ steps.detect-package-manager.outputs.runner }} next build
-          echo "Root files:"
-          ls -la
-          echo ".next top-level:"
-          ls -la .next || true
-          echo ".next/output:"
-          ls -la .next/output || true
-          echo ".next/server:"
-          ls -la .next/server || true
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
-          # Try to locate a static export produced by Next.js and copy it to ./out
-          rm -rf out || true
-          for src in \
-            ".next/output/static" \
-            ".next/output/export" \
-            ".next/export" \
-            ".next/standalone" \
-            ".next/static" \
-            "out"; do
-            if [ -d "$src" ]; then
-              echo "Found static output at: $src — copying to ./out"
-              cp -a "$src" ./out
-              break
-            fi
-          done
-
-          echo "Final out listing (if created):"
-          ls -la out || true
+      - name: Prepare .out for Pages
+        run: |
+          rm -rf out
+          mkdir -p out
+          if [ -d ".next/static" ]; then
+            echo "Copying .next/static -> out"
+            cp -a .next/static/. out/
+          else
+            echo "No static export found"
+            exit 1
+          fi
+          touch out/.nojekyll
 
       # - name: Add .nojekyll file
       #   run: touch ./out/.nojekyll
