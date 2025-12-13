@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ui/projectCard";
+import SoundcloudEmbed from "@/components/ui/soundcloudEmbed";
 import WorkCard from "@/components/ui/workCard";
 
 export default function Home() {
@@ -93,6 +94,19 @@ export default function Home() {
                 width={1111}
                 height={893}
               />
+            </div>
+          </section>
+
+          {/* Music */}
+          <section className="px-4 py-8 md:px-0">
+            <div className="mb-8">
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Some of My Music</h2>
+            </div>
+            <div className="grid grid-cols-1 gap-6">
+                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231240913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231242300&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231262560&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231260810&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
             </div>
           </section>
         </div>
