@@ -20,12 +20,11 @@ export default function WorkCard(
 ): ReactElement {
     return (
         <a
-            className="mb-4 border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none"
             href={url}
             target="_blank"
             rel="noopener noreferrer"
         >
-            <Card className="">
+            <Card className="mb-4 border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
                     <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">{title}</CardTitle>
                     <div className="flex items-center justify-between">

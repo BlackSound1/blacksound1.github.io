@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 import ProjectCard from "@/components/ui/projectCard";
 import SoundcloudEmbed from "@/components/ui/soundcloudEmbed";
 import WorkCard from "@/components/ui/workCard";
@@ -125,10 +126,11 @@ export default function Home() {
               <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Some of My Music</h2>
             </div>
             <div className="grid grid-cols-1 gap-6">
-                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231240913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231242300&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231262560&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
-                <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A231260810&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" />
+              <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent transition-colors">
+                <CardContent>
+                  <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A112988860&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true" />
+                </CardContent>
+              </Card>
             </div>
           </section>
         </div>

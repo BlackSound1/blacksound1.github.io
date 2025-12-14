@@ -8,7 +8,7 @@ export default function SoundcloudEmbed({embedURL}: SoundcloudProps): ReactEleme
     return (
         <iframe
             width="100%"
-            height="166"
+            height="370"
             allow="autoplay"
             src={embedURL}>
         </iframe>

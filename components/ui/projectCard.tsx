@@ -34,12 +34,11 @@ export default function ProjectCard(
 ): ReactElement {
     return (
         <a
-            className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
         >
-            <Card className="">
+            <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
                     <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">{name}</CardTitle>
                 </CardHeader>
