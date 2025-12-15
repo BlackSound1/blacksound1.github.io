@@ -77,15 +77,7 @@ export default function Home() {
                 link="https://github.com/BlackSound1/textual-system-monitor"
                 imagePath="/static/images/TSMScreenshot.png"
                 alt="TSM"
-                technologies={
-                  [
-                    {name:"Python", color: "blue"},
-                    {name: "Textual", color: "red"},
-                    {name: "Makefile", color: "orange"},
-                    {name: "Terminal", color: "purple"},
-                    {name: "TUI", color: "pink"},
-                  ]
-                }
+                technologies={["Python", "Textual", "Makefile", "Terminal", "TUI"]}
                 description="A beautiful system monitoring app created in Python, using Textual"
                 width={1906}
                 height={998}
@@ -95,15 +87,7 @@ export default function Home() {
                 link="https://github.com/BlackSound1/Go-B-and-B"
                 imagePath="/static/images/GoBandBHomePage.png"
                 alt="Go B&B"
-                technologies={
-                  [
-                    {name: "Web", color: "red"},
-                    {name: "Go", color: "teal"},
-                    {name: "REST", color: "black"},
-                    {name: "Docker", color: "blue"},
-                    {name: "Kubernetes", color: "green"},
-                  ]
-                }
+                technologies={["Web", "Go", "Docker", "REST", "Kubernetes", "JS"]}
                 description="A beautiful system monitoring app created in Python, using Textual"
                 width={1111}
                 height={893}

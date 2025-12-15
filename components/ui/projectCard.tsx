@@ -4,16 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Tag from "./tag";
 import TagLogo from "@/public/tag.svg"
 
-interface Technology {
-    name: string;
-    color: string;
-}
 
 interface ProjectProps {
     name: string;
     alt: string;
     imagePath: string;
-    technologies: Technology[];
+    technologies: string[];
     description: string;
     link: string;
     width: number;
@@ -53,8 +49,8 @@ export default function ProjectCard(
                     <CardDescription className="">
                         <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
                             <Image className="" priority src={TagLogo} alt="Tag Logo" height={16} width={16} />
-                            {technologies.map(({name, color}) => {
-                                return <Tag key={name} lang={name} _color={color} />
+                            {technologies.map((name) => {
+                                return <Tag key={name} lang={name} />
                             })}
                         </div>
                         <p className="mt-2">
