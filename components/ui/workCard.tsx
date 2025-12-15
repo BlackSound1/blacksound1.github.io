@@ -34,7 +34,7 @@ export default function WorkCard(
                 </CardHeader>
                 <CardContent>
                     <CardDescription>
-                        <p>{description}</p>
+                        <p className="mt-2 font-semibold">{description}</p>
                     </CardDescription>
                 </CardContent>
             </Card>

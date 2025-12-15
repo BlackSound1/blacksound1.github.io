@@ -40,7 +40,7 @@ export default function ProjectCard(
                 </CardHeader>
                 <CardContent>
                     <Image
-                        className="aspect-video w-full transition-transform duration-300 group-hover:scale-105 mb-6"
+                        className="aspect-video w-full transition-transform duration-300 group-hover:scale-102 mb-6"
                         src={imagePath}
                         alt={alt}
                         width={width}
@@ -48,12 +48,12 @@ export default function ProjectCard(
                     />
                     <CardDescription className="">
                         <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
-                            <Image className="" priority src={TagLogo} alt="Tag Logo" height={16} width={16} />
+                            <Image className="" priority src={TagLogo} alt="Tag Logo" height={16} />
                             {technologies.map((name) => {
                                 return <Tag key={name} lang={name} />
                             })}
                         </div>
-                        <p className="mt-2">
+                        <p className="mt-2 font-semibold">
                             {description}
                         </p>
                     </CardDescription>

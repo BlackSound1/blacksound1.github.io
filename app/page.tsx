@@ -13,7 +13,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl space-y-12 px-0 py-8 md:space-y-16 md:px-4 md:py-12">
           {/* About Me */}
           <section className="space-y-5 px-4 md:px-0">
-            <h1 className="text-3xl font-bold md:text-4xl">BlackSound1</h1>
+            <h1 className="text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>
             <p className="text-subtext0 max-w-prose text-lg leading-relaxed">
               I am a developer from Montréal who wants to use technology to improve the world. I have been coding in Python for 17 years and have full-stack experience with multiple languages and frameworks.
               Before getting into tech, I worked in the entertainment industry.
@@ -42,7 +42,7 @@ export default function Home() {
           {/* Work */}
           <section className="px-4 md:px-0">
             <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Work Experience</h2>
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Work Experience</h2>
             </div>
             <div className="grid grid-cols-1">
               <WorkCard
@@ -69,7 +69,7 @@ export default function Home() {
           {/* Projects */}
           <section className="px-4 md:px-0">
             <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Some Projects</h2>
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Some Projects</h2>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <ProjectCard 
@@ -98,7 +98,7 @@ export default function Home() {
           {/* Music */}
           <section className="px-4 md:px-0">
             <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl">Some of My Music</h2>
+              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Some of My Music</h2>
             </div>
             <div className="grid grid-cols-1 gap-6">
               <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent transition-colors">

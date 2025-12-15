@@ -15,12 +15,18 @@ const techColorMap: Record<string, string> = {
     Bash: "#89e051",
     CSS: "#663399",
     HTML: "#e34c26",
-    JS: "#f1e05a",
+    JS: "#c3b017",
     TS: "#3178c6",
     Cpp: "#f34b7d",
 }
 
 
+/**
+ * Given a technology string, returns the corresponding color string from techColorMap.
+ * If the technology string is not found in techColorMap, returns "black"
+ * @param {string} technology - the technology string to look up in techColorMap
+ * @returns {string} the color string corresponding to the technology string, or "black" if not found
+ */
 const _fetchColor = (technology: string) : string => {
     const color : string | undefined = techColorMap[technology];
     if (typeof color === "undefined") {
@@ -32,7 +38,7 @@ const _fetchColor = (technology: string) : string => {
 export default function Tag({lang, key}: TagProps): ReactElement {
     return (
         <span
-            className="tag bg-surface0 rounded px-2 py-1 font-semibold"
+            className="bg-[#eee] rounded-2xl px-2 py-1 font-semibold font-mono"
             style={{color: _fetchColor(lang)}}
         >
             {lang}
