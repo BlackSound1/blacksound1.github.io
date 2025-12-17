@@ -18,6 +18,9 @@ export default function Home() {
               I am a developer from Montréal who wants to use technology to improve the world. I have been coding in Python for 17 years and have full-stack experience with multiple languages and frameworks.
               Before getting into tech, I worked in the entertainment industry.
               I also made some of my own music.
+
+              <br /><br />
+              This site is a <span className="text-accent">work in progress</span>
             </p>
             <div className="flex flex-wrap items-center gap-x-4 pt-2">
               <a
@@ -92,13 +95,45 @@ export default function Home() {
                 width={1111}
                 height={893}
               />
-              <ProjectCard
+              <ProjectCard 
+                name="This site"
+                link="https://github.com/BlackSound1/blacksound1.github.io"
+                imagePath="/static/images/PortfolioScreenshot.png"
+                alt="This site"
+                technologies={["TS", "NextJS", "HTML", "CSS", "Web"]}
+                description="A simple, WIP portfolio site. You're on it now!"
+                width={657}
+                height={243}
+              />
+              <ProjectCard 
+                name="Redis Clone"
+                link="https://github.com/BlackSound1/redis-clone"
+                imagePath="/static/images/RedisCloneScreenshot.png"
+                alt="Redis Clone"
+                technologies={["Go", "Redis", "Terminal"]}
+                description="A minimal clone of a Redis server, written in Go."
+                width={502}
+                height={228}
+              />
+              <ProjectCard 
                 name="Basic C++ Shell"
                 link="https://github.com/BlackSound1/Basic-CPP-Shell"
-                imagePath=""
+                imagePath="/static/images/ShellScreenshot.png"
                 alt="Basic C++ Shell"
                 technologies={["Shell", "Terminal", "Cpp"]}
                 description="A minimum viable product for a terminal shell, written in C++."
+                width={438}
+                height={253}
+              />
+              <ProjectCard 
+                name="Go Microservices"
+                link="https://github.com/BlackSound1/go-microservices"
+                imagePath="/static/images/GoMicroservicesScreenshot.png"
+                alt="Go Microservices"
+                technologies={["Go", "Docker", "Kubernetes", "Makefile", "Microservices"]}
+                description="A project I made to teach myself Go and the microservices architecture."
+                width={1383}
+                height={531}
               />
             </div>
           </section>

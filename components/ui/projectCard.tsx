@@ -33,6 +33,7 @@ export default function ProjectCard(
             href={link}
             target="_blank"
             rel="noopener noreferrer"
+            title={description}
         >
             <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
@@ -49,13 +50,13 @@ export default function ProjectCard(
                         />
                     }
                     <CardDescription className="">
-                        <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
-                            <Image className="" priority src={TagLogo} alt="Tag Logo" height={16} />
+                        <div className="flex max-h-8 flex-wrap gap-2 overflow-hidden text-xs">
+                            <Image priority src={TagLogo} alt="Tag Logo" height={16} />
                             {technologies.map((name) => {
                                 return <Tag key={name} lang={name} />
                             })}
                         </div>
-                        <p className="mt-2 font-semibold">
+                        <p className="mt-2 font-semibold line-clamp-2">
                             {description}
                         </p>
                     </CardDescription>

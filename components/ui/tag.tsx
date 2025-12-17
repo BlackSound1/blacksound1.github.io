@@ -7,7 +7,7 @@ interface TagProps {
 
 const techColorMap: Record<string, string> = {
     Python: "#3572a5",
-    Makefile: "#427819",
+    Makefile: "#e17732",
     Kubernetes: "#316ce6",
     Docker: "#2560ff",
     Go: "#00add8",
@@ -18,6 +18,8 @@ const techColorMap: Record<string, string> = {
     JS: "#c3b017",
     TS: "#3178c6",
     Cpp: "#f34b7d",
+    Redis: "#ff4438",
+    Terminal: "#0fcb0e",
 }
 
 
@@ -28,11 +30,8 @@ const techColorMap: Record<string, string> = {
  * @returns {string} the color string corresponding to the technology string, or "black" if not found
  */
 const _fetchColor = (technology: string) : string => {
-    const color : string | undefined = techColorMap[technology];
-    if (typeof color === "undefined") {
-        return "black";
-    }
-    return color;
+    const color: string | undefined = techColorMap[technology];
+    return typeof color === "undefined" ? "black" : color;
 }
 
 export default function Tag({lang, key}: TagProps): ReactElement {
