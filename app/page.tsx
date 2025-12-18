@@ -74,7 +74,7 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono">Some Projects</h2>
             </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-flow-row-dense auto-rows-fr">
               <ProjectCard 
                 name="Textual System Monitor"
                 link="https://github.com/BlackSound1/textual-system-monitor"

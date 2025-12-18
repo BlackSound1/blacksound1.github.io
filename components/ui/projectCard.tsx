@@ -34,29 +34,28 @@ export default function ProjectCard(
             target="_blank"
             rel="noopener noreferrer"
             title={name + ": " + description}
+            className="block h-full"
         >
-            <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
+            <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
                     <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">{name}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                     {imagePath &&
-                        <Image
-                            className="aspect-video w-full transition-transform duration-300 group-hover:scale-102 mb-6"
+                        <img
+                            className="mx-auto w-full max-h-40 object-cover transition-transform duration-300 group-hover:scale-102 mb-6"
                             src={imagePath}
                             alt={alt}
-                            width={width}
-                            height={height}
                         />
                     }
                     <CardDescription className="">
-                        <div className="flex max-h-8 flex-wrap gap-2 overflow-hidden text-xs">
+                        <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
                             <Image priority src={TagLogo} alt="Tag Logo" height={16} />
                             {technologies.map((name) => {
                                 return <Tag key={name} lang={name} />
                             })}
                         </div>
-                        <p className="mt-2 font-semibold line-clamp-2">
+                        <p className="mt-2 font-semibold">
                             {description}
                         </p>
                     </CardDescription>
