@@ -93,7 +93,7 @@ export default function Home() {
               />
               <ProjectCard 
                 name="This site"
-                link="https://github.com/BlackSound1/blacksound1.github.io"
+                link="https://github.com/BlackSound1/BlackSound1-portfolio"
                 imagePath="/static/images/PortfolioScreenshot.png"
                 alt="This site"
                 technologies={["TS", "NextJS", "HTML", "CSS", "Web"]}
