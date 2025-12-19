@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import ProjectCard from "@/components/ui/projectCard";
@@ -5,8 +7,18 @@ import SoundcloudEmbed from "@/components/ui/soundcloudEmbed";
 import WorkCard from "@/components/ui/workCard";
 import GitHubLogo from "@/public/github.svg";
 import LinkedInLogo from "@/public/linkedin.svg";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [accent, setAccent] = useState<string>("#eb575a");
+
+  useEffect(() => {
+    // Overwrite the --accent color throughout app
+    if (typeof document !== "undefined") {
+      document.documentElement.style.setProperty("--accent", accent);
+    }
+  }, [accent]);
+
   return (
     <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
       <main className="flex-1 px-0 py-8 md:px-5">
@@ -126,18 +138,45 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Music */}
+          {/* Fun Stuff */}
           <section className="px-4 md:px-0">
-            <div className="mb-8">
-              <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Some of My Music</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-6">
-              <Card className="border-surface0 bg-mantle hover:border-accent focus-visible:border-accent transition-colors">
-                <CardContent>
-                  <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A112988860&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true" />
-                </CardContent>
-              </Card>
-            </div>
+              <div className="mb-8">
+                <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Fun Stuff</h2>
+              </div>
+
+            {/* Color Picker */}
+            <section className="px-4 md:px-0">
+              <div className="mb-8">
+                <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Color Picker</h3>
+              </div>
+              <div className="grid grid-cols-1 gap-6">
+                <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors">
+                  <CardContent>
+                      <input 
+                        type="color"
+                        aria-label="Choose highlight color"
+                        value={accent}
+                        onChange={e => setAccent(e.target.value)}
+                        className="h-full w-full rounded-md border border-surface1 p-0"
+                        />
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            {/* Music */}
+            <section className="px-4 md:px-0">
+              <div className="mb-8">
+                <h3 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Some of My Music</h3>
+              </div>
+              <div className="grid grid-cols-1 gap-6">
+                <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors">
+                  <CardContent>
+                    <SoundcloudEmbed embedURL="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A112988860&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true" />
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
           </section>
         </div>
       </main>
