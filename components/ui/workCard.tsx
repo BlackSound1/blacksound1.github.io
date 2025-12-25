@@ -9,14 +9,17 @@ interface WorkProps {
     url: string;
 }
 
+/**
+ * A clickable card showing an individual work experience.
+ * @param company The company I work(ed) for.
+ * @param title My job title.
+ * @param time The time I worked there.
+ * @param description A brief job description and some accomplishments.
+ * @param url A link to the company's page
+ * @returns {ReactElement} A clickable card showing an individual work experience.
+ */
 export default function WorkCard(
-    {
-        company,
-        title,
-        time,
-        description,
-        url
-    }: WorkProps
+    { company, title, time, description, url }: WorkProps
 ): ReactElement {
     return (
         <a
@@ -40,4 +43,4 @@ export default function WorkCard(
             </Card>
         </a>
     );
-}
+};

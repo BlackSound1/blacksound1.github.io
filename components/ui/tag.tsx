@@ -34,7 +34,12 @@ const _fetchColor = (technology: string) : string => {
     return typeof color === "undefined" ? "black" : color;
 }
 
-export default function Tag({lang, key}: TagProps): ReactElement {
+/**
+ * A \<span\> dedicated to a single technology tag.
+ * @param lang The language tag 
+ * @returns {ReactElement} A \<span\> dedicated to a single technology tag.
+ */
+export default function Tag({ lang }: TagProps): ReactElement {
     return (
         <span
             className="bg-[#eee] rounded-2xl px-2 py-1 font-semibold font-mono"

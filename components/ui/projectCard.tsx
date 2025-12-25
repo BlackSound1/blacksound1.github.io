@@ -14,15 +14,18 @@ interface ProjectProps {
     link: string;
 }
 
+/**
+ * A section dedicated to my projects.
+ * @param name The name of the project.
+ * @param alt The text to show in the alt of the image.
+ * @param imagePath The path to the image for the project.
+ * @param technologies A list of technologies used in the making of the project.
+ * @param description The description of the project.
+ * @param link The link to the GitHub page for the project.
+ * @returns {ReactElement} A section dedicated to my projects.
+ */
 export default function ProjectCard(
-    {
-        name,
-        alt,
-        imagePath,
-        technologies,
-        description,
-        link,
-    }: ProjectProps
+    { name, alt, imagePath, technologies, description, link }: ProjectProps
 ): ReactElement {
     return (
         <a
