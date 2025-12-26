@@ -2,6 +2,7 @@
 
 import { ReactElement, useEffect, useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./card";
+import posthog from "posthog-js";
 
 
 /**
@@ -34,7 +35,12 @@ export default function ColorPickerSection(): ReactElement {
                             type="color"
                             aria-label="Choose highlight color"
                             value={accent}
-                            onChange={e => setAccent(e.target.value)}
+                            onChange={e => {
+                                    const newColor = e.target.value;
+                                    setAccent(newColor);
+                                    posthog.capture('color-changed', { newColor: newColor });
+                                }
+                            }
                         />
                     </CardContent>
                 </Card>

@@ -1,3 +1,5 @@
+import posthog from "posthog-js";
+
 import Break from "@/components/ui/break";
 import AboutMeSection from "@/components/ui/AboutMeSection";
 import WorkSection from "@/components/ui/WorkSection";
@@ -6,6 +8,8 @@ import FunSection from "@/components/ui/FunSection";
 
 
 export default function Home() {
+  posthog.capture('$pageview', { page: 'homepage' });
+
   return (
     <div className="text-text mx-auto flex min-h-screen max-w-[90%] flex-col md:max-w-[80%]">
       <main className="flex-1 px-0 py-8 md:px-5">
