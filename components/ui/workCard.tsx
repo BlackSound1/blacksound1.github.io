@@ -1,5 +1,9 @@
+'use client';
+
 import { ReactElement } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import posthog from "posthog-js";
+
 
 interface WorkProps {
     company: string;
@@ -26,6 +30,7 @@ export default function WorkCard(
             href={url}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {posthog.capture('work-clicked', { company: company })}}
         >
             <Card className="mb-4 border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
