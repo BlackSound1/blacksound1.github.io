@@ -1,5 +1,8 @@
+'use client';
+
 import { ReactElement } from "react";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 
 interface SocialLinkProps {
@@ -22,6 +25,7 @@ export default function SocialLink({ url, name, logo }: SocialLinkProps): ReactE
             href={url}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => posthog.capture('social-link-clicked', { site: name })}
         >
             <Image priority src={logo} alt={`${name} logo`} height={18} />{name}
         </a>
