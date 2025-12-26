@@ -1,8 +1,11 @@
+'use client';
+
 import { ReactElement } from "react";
 import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Tag from "./tag";
 import TagLogo from "@/public/tag.svg"
+import posthog from "posthog-js";
 
 
 interface ProjectProps {
@@ -34,6 +37,7 @@ export default function ProjectCard(
             rel="noopener noreferrer"
             title={name + ": " + description}
             className="block h-full"
+            onClick={() => posthog.capture('project-clicked', { project: name })}
         >
             <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
