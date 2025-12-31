@@ -1,10 +1,10 @@
 'use client';
 
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./card";
 import posthog from "posthog-js";
 
-import { darkenHex } from '@/lib/utils';
+import { useAccent } from "@/context/AccentContext";
 
 
 /**
@@ -12,17 +12,7 @@ import { darkenHex } from '@/lib/utils';
  * @returns {ReactElement} A color picker section for styling the site.
  */
 export default function ColorPickerSection(): ReactElement {
-    const [accent, setAccent] = useState<string>("#eb575a");
-
-    useEffect(() => {
-    // Overwrite the --accent color throughout app
-    if (typeof document !== "undefined") {
-        document.documentElement.style.setProperty("--accent", accent);
-        document.documentElement.style.setProperty("--scrollbar-thumb", accent);
-        document.documentElement.style.setProperty("--scrollbar-thumb-hover", darkenHex(accent, 20));
-        document.documentElement.style.setProperty('--sc-color', accent);
-    }
-    }, [accent]);
+    const { accent, setAccent } = useAccent();
 
     return (
         <section className="px-4">
