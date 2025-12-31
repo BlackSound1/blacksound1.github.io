@@ -20,6 +20,7 @@ export default function ColorPickerSection(): ReactElement {
         document.documentElement.style.setProperty("--accent", accent);
         document.documentElement.style.setProperty("--scrollbar-thumb", accent);
         document.documentElement.style.setProperty("--scrollbar-thumb-hover", darkenHex(accent, 20));
+        document.documentElement.style.setProperty('--sc-color', accent);
     }
     }, [accent]);
 
