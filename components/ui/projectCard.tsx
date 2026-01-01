@@ -56,7 +56,7 @@ export default function ProjectCard(
                             />
                         </div>
                     }
-                    <CardDescription className="">
+                    <CardDescription>
                         <div className="flex flex-wrap gap-2 overflow-hidden text-xs">
                             <Image priority src={TagLogo} alt="Tag Logo" height={16} />
                             {technologies.map((name) => {

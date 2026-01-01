@@ -1,10 +1,11 @@
 'use client';
 
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./card";
 import posthog from "posthog-js";
 
-import { darkenHex } from '@/lib/utils';
+import { useAccent } from "@/context/AccentContext";
+import { useColorCheckbox } from "@/context/ColorCheckboxContext";
 
 
 /**
@@ -12,16 +13,8 @@ import { darkenHex } from '@/lib/utils';
  * @returns {ReactElement} A color picker section for styling the site.
  */
 export default function ColorPickerSection(): ReactElement {
-    const [accent, setAccent] = useState<string>("#eb575a");
-
-    useEffect(() => {
-    // Overwrite the --accent color throughout app
-    if (typeof document !== "undefined") {
-        document.documentElement.style.setProperty("--accent", accent);
-        document.documentElement.style.setProperty("--scrollbar-thumb", accent);
-        document.documentElement.style.setProperty("--scrollbar-thumb-hover", darkenHex(accent, 20));
-    }
-    }, [accent]);
+    const { accent, setAccent } = useAccent();
+    const { checked, setChecked } = useColorCheckbox();
 
     return (
         <section className="px-4">
@@ -34,18 +27,28 @@ export default function ColorPickerSection(): ReactElement {
                         <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">Use this color picker to change the accent color of the site</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <input 
-                            className="h-full w-full rounded-md border border-surface1 p-0"
-                            type="color"
-                            aria-label="Choose highlight color"
-                            value={accent}
-                            onChange={e => {
-                                    const newColor = e.target.value;
-                                    setAccent(newColor);
-                                    posthog.capture('color-changed', { newColor: newColor });
+                        <div className="grid grid-rows-2">
+                            <span>
+                                <input 
+                                    className="mr-2 mb-4 mt-[-4]"
+                                    type="checkbox"
+                                    name="sc-color-enable"
+                                    onClick={() => setChecked(!checked)}/>
+                                <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">Don't reload Soundcloud on color change</label>
+                            </span>
+                            <input 
+                                className="h-full w-full rounded-md border border-surface1 p-0"
+                                type="color"
+                                aria-label="Choose highlight color"
+                                value={accent}
+                                onChange={e => {
+                                        const newColor = e.target.value;
+                                        setAccent(newColor);
+                                        posthog.capture('color-changed', { newColor: newColor });
+                                    }
                                 }
-                            }
-                        />
+                            />
+                        </div>
                     </CardContent>
                 </Card>
             </div>
