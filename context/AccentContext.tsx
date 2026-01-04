@@ -19,7 +19,16 @@ const AccentContext = createContext<AccentContextType | undefined>(undefined);
  * @returns The AccentContext provider.
  */
 export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [accent, setAccent] = useState<string>("#eb575a");
+    const [accent, setAccent] = useState<string>('#eb575a');
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const accentColor = localStorage.getItem('accent');
+            if (accentColor) {
+                setAccent(accentColor);
+            }
+        }
+    }, [])
 
     useEffect(() => {
         if (typeof document === "undefined") {
@@ -29,6 +38,7 @@ export const AccentProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         document.documentElement.style.setProperty("--scrollbar-thumb", accent);
         document.documentElement.style.setProperty("--scrollbar-thumb-hover", darkenHex(accent, 20));
         document.documentElement.style.setProperty("--sc-color", accent);
+        localStorage.setItem('accent', accent);
     }, [accent]);
 
     const value = useMemo(
