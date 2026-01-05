@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ReactElement, useEffect, useState } from "react";
-import Commit from '@/public/Commit.svg';
+import Commit from '@/public/commit.svg';
 
 /**
  * Queries GitHub for the latest commit to the `main` branch and displays the result.
