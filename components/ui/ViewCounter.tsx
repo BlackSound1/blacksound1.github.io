@@ -7,7 +7,7 @@ import { ReactElement, useEffect, useState } from "react";
  * @returns The View Counter.
  */
 export default function ViewCounter(): ReactElement {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState("Fetching...");
 
     /**
      * Query Abacus to get the page view count.

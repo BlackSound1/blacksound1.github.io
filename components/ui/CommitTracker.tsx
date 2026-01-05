@@ -9,7 +9,7 @@ import Commit from '@/public/commit.svg';
  * @returns The latest commit to `main`.
  */
 export default function CommitTracker(): ReactElement {
-    const [commit, setCommit] = useState("");
+    const [commit, setCommit] = useState("Fetching...");
 
     /**
      * Query GitHub for the most recent `main` commit
