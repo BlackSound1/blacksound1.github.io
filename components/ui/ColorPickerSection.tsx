@@ -34,7 +34,7 @@ export default function ColorPickerSection(): ReactElement {
                                     type="checkbox"
                                     name="sc-color-enable"
                                     onClick={() => setChecked(!checked)}/>
-                                <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">Don't reload Soundcloud on color change</label>
+                                <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">Don&apos;t reload Soundcloud on color change</label>
                             </span>
                             <input 
                                 className="h-full w-full rounded-md border border-surface1 p-0"
