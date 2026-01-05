@@ -37,7 +37,7 @@ export default function ColorPickerSection(): ReactElement {
                                 <label className="font-semibold text-muted-foreground" htmlFor="sc-color-enable">Don&apos;t reload Soundcloud on color change</label>
                             </span>
                             <input 
-                                className="h-full w-full rounded-md border border-surface1 p-0"
+                                className="h-full w-full rounded-md p-0"
                                 type="color"
                                 aria-label="Choose highlight color"
                                 value={accent}
