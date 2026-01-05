@@ -1,6 +1,8 @@
 'use client';
 
+import Image from "next/image";
 import { ReactElement, useEffect, useState } from "react";
+import Commit from '@/public/Commit.svg';
 
 /**
  * Queries GitHub for the latest commit to the `main` branch and displays the result.
@@ -37,6 +39,6 @@ export default function CommitTracker(): ReactElement {
     }, []);
 
     return (
-        <div>{`Commit: ${commit}`}</div>
+        <div className="flex flex-wrap items-center justify-center"><Image src={Commit} height={18} alt="Commit" />{commit}</div>
     );
 };
