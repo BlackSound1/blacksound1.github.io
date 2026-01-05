@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AccentProvider } from "@/context/AccentContext";
 import { ColorCheckboxProvider } from "@/context/ColorCheckboxContext";
+import Footer from "@/components/ui/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <AccentProvider>
           <ColorCheckboxProvider>
             {children}
+            <Footer />
           </ColorCheckboxProvider>
         </AccentProvider>
       </body>
