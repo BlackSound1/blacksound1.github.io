@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AccentProvider } from "@/context/AccentContext";
 import { ColorCheckboxProvider } from "@/context/ColorCheckboxContext";
-import { Tile } from "@/components/doras-ui/tile";
 import StatusIndicator from "@/components/ui/status-indicator";
 import ViewCounter from "@/components/ui/ViewCounter";
 
