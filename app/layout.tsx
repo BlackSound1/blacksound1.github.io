@@ -5,6 +5,7 @@ import { AccentProvider } from "@/context/AccentContext";
 import { ColorCheckboxProvider } from "@/context/ColorCheckboxContext";
 import StatusIndicator from "@/components/ui/status-indicator";
 import ViewCounter from "@/components/ui/ViewCounter";
+import CommitTracker from "@/components/ui/CommitTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,8 @@ export default function RootLayout({
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 md:justify-end">
                   <ViewCounter />
+                  <span className="text-surface0 hidden md:inline">-</span>
+                  <CommitTracker />
                 </div>
               </footer>
             </div>
