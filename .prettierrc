@@ -3,6 +3,7 @@
     "singleQuote": true,
     "semi": true,
     "bracketSameLine": false,
+    "printWidth": 120,
     "importOrder": ["<BUILTIN_MODULES>", "<THIRD_PARTY_MODULES>", "^@context/(.*)$", "^@components/ui/(.*)$", "^@lib/(.*)$", "^[./]"],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true,
