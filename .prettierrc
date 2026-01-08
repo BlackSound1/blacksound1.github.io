@@ -1,0 +1,11 @@
+{
+    "trailingComma": "all",
+    "singleQuote": true,
+    "semi": true,
+    "bracketSameLine": false,
+    "importOrder": ["<BUILTIN_MODULES>", "<THIRD_PARTY_MODULES>", "^@context/(.*)$", "^@components/ui/(.*)$", "^@lib/(.*)$", "^[./]"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderCaseInsensitive": true,
+    "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}
