@@ -7,6 +7,6 @@ import { ReactElement } from "react";
  */
 export default function Break(): ReactElement {
     return (
-        <hr className="w-48 mx-auto bg-neutral-100 rounded-sm md:my-10" />
+        <hr className="w-48 mx-auto bg-neutral-100 rounded-sm my-10" />
     );
 };
