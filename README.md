@@ -16,3 +16,4 @@ Deployed At: https://blacksound1-portfolio.vercel.app/
 - Node.js (JavaScript runtime)
 - PNPM (package manager)
 - PostHog (Analytics)
+- Prettier (Formatter)
