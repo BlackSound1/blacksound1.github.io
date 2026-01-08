@@ -39,6 +39,6 @@ export default function CommitTracker(): ReactElement {
     }, []);
 
     return (
-        <div className="flex flex-wrap items-center justify-center hover:text-accent transition-colors"><Image src={Commit} height={18} alt="Commit" />{commit}</div>
+        <div id="commit-tracker" className="flex flex-wrap items-center justify-center hover:text-accent transition-colors"><Image src={Commit} height={18} alt="Commit" />{commit}</div>
     );
 };

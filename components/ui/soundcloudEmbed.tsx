@@ -12,6 +12,7 @@ interface SoundcloudProps {
 export default function SoundcloudEmbed({ embedURL }: SoundcloudProps): ReactElement {
     return (
         <iframe
+            id="soundcloud-iframe"
             width="100%"
             height="370"
             allow="autoplay"

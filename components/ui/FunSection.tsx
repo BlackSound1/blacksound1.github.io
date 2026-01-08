@@ -9,7 +9,7 @@ import MusicSection from "./MusicSection";
  */
 export default function FunSection(): ReactElement {
     return (
-        <section className="px-4 md:px-0">
+        <section id="fun-section" className="px-4 md:px-0">
             <div className="mb-8">
             <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Fun Stuff</h2>
             </div>

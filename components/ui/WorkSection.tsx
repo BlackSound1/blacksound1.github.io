@@ -8,7 +8,7 @@ import WorkCard from "./workCard";
  */
 export default function WorkSection(): ReactElement {
     return (
-        <section className="px-4 md:px-0">
+        <section id="work-section" className="px-4 md:px-0">
             <div className="mb-8">
                 <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Work Experience</h2>
             </div>

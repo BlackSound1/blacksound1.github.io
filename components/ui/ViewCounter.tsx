@@ -26,6 +26,6 @@ export default function ViewCounter(): ReactElement {
     }, []);
 
     return (
-        <div><span className="hover:text-accent transition-colors">{count}</span> <span>views</span></div>
+        <div id="view-counter"><span className="hover:text-accent transition-colors">{count}</span> <span>views</span></div>
     );
 };

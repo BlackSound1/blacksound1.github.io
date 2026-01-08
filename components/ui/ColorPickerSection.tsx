@@ -17,7 +17,7 @@ export default function ColorPickerSection(): ReactElement {
     const { checked, setChecked } = useColorCheckbox();
 
     return (
-        <section className="px-4">
+        <section id="color-picker-section" className="px-4">
             <div className="mb-8">
                 <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent">Color Picker</h3>
             </div>
