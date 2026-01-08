@@ -22,7 +22,7 @@ export default function SocialLink({ url, name, logo }: SocialLinkProps): ReactE
     return (
         <a
             id={`${name}-link`}
-            className="text-subtext1 hover:text-accent inline-flex items-center gap-1.5 transition-colors duration-200 text-sm"
+            className="hover:text-accent inline-flex items-center gap-1.5 transition-colors duration-200 text-sm"
             href={url}
             target="_blank"
             rel="noopener noreferrer"

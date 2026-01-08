@@ -32,7 +32,7 @@ export default function WorkCard(
             rel="noopener noreferrer"
             onClick={() => posthog.capture('work-clicked', { company: company })}
         >
-            <Card className="mb-4 border-surface0 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
+            <Card className="mb-4 bg-mantle hover:border-accent focus-visible:border-accent group block overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
                 <CardHeader>
                     <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">{title}</CardTitle>
                     <div className="flex items-center justify-between">

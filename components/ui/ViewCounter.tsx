@@ -13,7 +13,8 @@ export default function ViewCounter(): ReactElement {
      * Query Abacus to get the page view count.
      */
     const trackHit = async () => {
-        await fetch("https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits")
+        const URL = "https://abacus.jasoncameron.dev/hit/blacksound1-portfolio.vercel.app/visits";
+        await fetch(URL)
               .then((resp) => {
                   return resp.json();
               }).then((data) => {

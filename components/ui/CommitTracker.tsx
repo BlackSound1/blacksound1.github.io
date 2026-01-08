@@ -25,7 +25,9 @@ export default function CommitTracker(): ReactElement {
             headers: headers,
         }
 
-        await fetch("https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main", options)
+        const URL = "https://api.github.com/repos/BlackSound1/BlackSound1-portfolio/commits?sha=main";
+
+        await fetch(URL, options)
               .then((resp) => {
                 return resp.json();
               })
