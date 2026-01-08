@@ -1,14 +1,13 @@
 'use client';
 
-import { ReactElement } from "react";
-import Image from "next/image";
-import posthog from "posthog-js";
-
+import Image from 'next/image';
+import posthog from 'posthog-js';
+import { ReactElement } from 'react';
 
 interface SocialLinkProps {
-    name: string;
-    url: string;
-    logo: string;
+  name: string;
+  url: string;
+  logo: string;
 }
 
 /**
@@ -19,15 +18,17 @@ interface SocialLinkProps {
  * @returns {ReactElement} A clickable link to one of my social pages.
  */
 export default function SocialLink({ url, name, logo }: SocialLinkProps): ReactElement {
-    return (
-        <a
-            className="text-subtext1 hover:text-accent inline-flex items-center gap-1.5 transition-colors duration-200 text-sm"
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => posthog.capture('social-link-clicked', { site: name })}
-        >
-            <Image priority src={logo} alt={`${name} logo`} height={18} />{name}
-        </a>
-    );
-};
+  return (
+    <a
+      id={`${name}-link`}
+      className="hover:text-accent inline-flex items-center gap-1.5 transition-colors duration-200 text-sm"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => posthog.capture('social-link-clicked', { site: name })}
+    >
+      <Image priority src={logo} alt={`${name} logo`} height={18} />
+      {name}
+    </a>
+  );
+}

@@ -1,11 +1,11 @@
 'use client';
 
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from 'react';
 
 type ColorCheckboxType = {
-    checked: boolean;
-    setChecked: Dispatch<SetStateAction<boolean>>;
-}
+  checked: boolean;
+  setChecked: Dispatch<SetStateAction<boolean>>;
+};
 
 // Create the ColorCheckboxContext
 const ColorCheckboxContext = createContext<ColorCheckboxType | undefined>(undefined);
@@ -16,18 +16,11 @@ const ColorCheckboxContext = createContext<ColorCheckboxType | undefined>(undefi
  * @returns The ColorCheckboxContext provider.
  */
 export const ColorCheckboxProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
 
-    const value = useMemo(
-        () => ({ checked, setChecked }),
-        [checked, setChecked],
-    );
+  const value = useMemo(() => ({ checked, setChecked }), [checked, setChecked]);
 
-    return (
-        <ColorCheckboxContext.Provider value={value}>
-            {children}
-        </ColorCheckboxContext.Provider>
-    );
+  return <ColorCheckboxContext.Provider value={value}>{children}</ColorCheckboxContext.Provider>;
 };
 
 /**
@@ -35,9 +28,9 @@ export const ColorCheckboxProvider: React.FC<{ children: ReactNode }> = ({ child
  * @returns The color checkbox context.
  */
 export function useColorCheckbox(): ColorCheckboxType {
-    const ctx = useContext(ColorCheckboxContext);
-    if (!ctx) {
-        throw new Error("useColorCheckbox must be used within an ColorCheckboxProvider");
-    }
-    return ctx;
-};
+  const ctx = useContext(ColorCheckboxContext);
+  if (!ctx) {
+    throw new Error('useColorCheckbox must be used within an ColorCheckboxProvider');
+  }
+  return ctx;
+}
