@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 
 import ColorPickerSection from './ColorPickerSection';
 import MusicSection from './MusicSection';
+import ThemeSection from './ThemeSection';
 
 /**
  * A section containing the non-professional aspects of the site.
@@ -16,6 +17,9 @@ export default function FunSection(): ReactElement {
 
       {/* Color Picker */}
       <ColorPickerSection />
+
+      {/* Themes */}
+      <ThemeSection />
 
       {/* Music */}
       <MusicSection />
