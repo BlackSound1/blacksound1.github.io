@@ -42,7 +42,7 @@ export default function MusicSection(): ReactElement {
         </h3>
       </div>
       <div className="grid grid-cols-1 gap-6">
-        <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors shadow-xl">
+        <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors shadow-lg hover:shadow-xl">
           <CardContent>
             <SoundcloudEmbed embedURL={embedURL} />
           </CardContent>
