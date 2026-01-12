@@ -1,12 +1,12 @@
 'use client';
 
-import { ReactElement, useEffect, useState } from "react";
+import { ChangeEvent, ReactElement, useEffect, useState } from "react";
 import { Card, CardContent } from "./card";
 
-
-const themeVariantMap = new Map<string, string[]>();
-themeVariantMap.set("default", ["default"]);
-themeVariantMap.set("catpuccin", ["latte", "mocha", "frappe", "macchiato"])
+const THEME_VARIANTS: Record<string, string[]> = {
+    default: ['default'],
+    catpuccin: ["latte", "mocha", "frappe", "macchiato"],
+}
 
 export default function ThemeSection(): ReactElement {
 
@@ -15,15 +15,25 @@ export default function ThemeSection(): ReactElement {
     const [variant, setVariant] = useState('default');
 
     useEffect(() => {
-        const v = themeVariantMap.get(theme);
+        let v = THEME_VARIANTS[theme];
         if (typeof v === 'undefined') {
-            setVariants(['default']);
-        } else {
-            setVariants(v);
+            v = ['default'];
         }
+
+        setVariants(v);
+
+        const chosenVariant = v[0] ?? 'default';
+
+        setVariant(chosenVariant);
+        localStorage.setItem('variants', JSON.stringify(v));
+        localStorage.setItem('theme', theme);
     }, [theme])
 
-    const themes = themeVariantMap.keys();
+    useEffect(() => {
+        localStorage.setItem('variant', variant);
+    }, [variant])
+
+    const themes = Array.from(Object.keys(THEME_VARIANTS));
 
     return (
         <section id="theme-section" className="px-4">
@@ -37,27 +47,29 @@ export default function ThemeSection(): ReactElement {
                     <CardContent>
                         <div className="grid grid-cols-2">
                             <span>
-                                <select name="theme" id="theme">
+                                <select 
+                                    name="theme"
+                                    id="theme"
+                                    value={theme}
+                                    onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
+                                >
                                     <option disabled value="message">CHOOSE A THEME</option>
-                                    {themes.map((t) => {
-                                        return <option 
-                                                    key={t}
-                                                    value={t} 
-                                                    onClick={() => { setTheme(t); console.log(theme) }}
-                                               >{t}</option>
-                                    })}
+                                    {themes.map((t) => (
+                                        <option key={t} value={t}>{t}</option>
+                                    ))}
                                 </select>
                             </span>
                             <span>
-                                <select name="variant" id="variant">
+                                <select
+                                    name="variant"
+                                    id="variant"
+                                    value={variant}
+                                    onChange={(e: ChangeEvent<HTMLSelectElement>) => setVariant(e.target.value)}
+                                >
                                     <option disabled value="message">CHOOSE A VARIANT</option>
-                                    {variants.map((v) => {
-                                        return <option 
-                                                    key={v}
-                                                    value={v}
-                                                    onClick={() => { setVariant(v); console.log(v) }}
-                                               >{v}</option>
-                                    })}
+                                    {variants.map((v) => (
+                                        <option key={v} value={v}>{v}</option>
+                                    ))}
                                 </select>
                             </span>
                         </div>
