@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 
 import { AccentProvider } from '@/context/AccentContext';
 import { ColorCheckboxProvider } from '@/context/ColorCheckboxContext';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 import Footer from '@/components/ui/Footer';
 
@@ -38,8 +39,10 @@ export default function RootLayout({
             <div className="mx-auto max-w-6xl space-y-12 px-0 py-8 md:space-y-16 md:px-4 md:py-12">
               <AccentProvider>
                 <ColorCheckboxProvider>
-                  {children}
-                  <Footer />
+                  <ThemeProvider>
+                    {children}
+                    <Footer />
+                  </ThemeProvider>
                 </ColorCheckboxProvider>
               </AccentProvider>
             </div>
