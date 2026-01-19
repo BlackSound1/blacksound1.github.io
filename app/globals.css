@@ -53,57 +53,82 @@ section {
 
 :root[data-theme='default'] {
   --background: #f5f5f5;
-  --muted-foreground: oklch(0.556 0 0);
+  --text: var(--muted-foreground);
+  /* --muted-foreground: oklch(0.556 0 0); */
+  /* --card-foreground: oklch(0.556 0 0); */
+  .tag-path {
+    stroke: var(--text);
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='latte'] {
+  --text: #4c4f69;
   --background: #e6e9ef;
-  --muted: red;
-  --muted-foreground: #6c6f85;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
 
   h1 {
     color: #8839ef;
   }
 
-  h1:hover {
-    color: var(--sc-color);
-  }
-
   h2 {
     color: #7287fd;
   }
-  
-  h2:hover {
-    color: var(--sc-color);
-  }
-  
+
   h3 {
     color: #1e66f5;
   }
 
-  h3:hover {
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
     color: var(--sc-color);
   }
 
-  p, a {
-    color: #4c4f69;
+  .tag {
+    background-color: #dce0e8;
   }
 
-  a:hover {
-    color: var(--sc-color);
-  }
-
-  .project-card {
-    color: #4c4f69;
-  }
-
-  .project-card:hover {
-    color: var(--sc-color);
+  .tag-path {
+    stroke: var(--text);
   }
 }
 
 :root[data-theme='catpuccin'][data-variant='mocha'] {
-  --background: orange;
+  --text: #cdd6f4;
+  --background: #181825;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #cba6f7;
+  }
+
+  h2 {
+    color: #b4befe;
+  }
+
+  h3 {
+    color: #89b4fa;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #bac2de;
+  }
+
+  .tag-path {
+    stroke: var(--text);
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='frappe'] {

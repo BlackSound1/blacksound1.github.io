@@ -32,7 +32,7 @@ export default function ThemeSection(): ReactElement {
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
                 >
                   {themes.map((t) => (
-                    <option key={t} value={t}>{capitalize(t)}</option>
+                    <option className='theme' key={t} value={t}>{capitalize(t)}</option>
                   ))}
                 </select>
               </span>
@@ -45,7 +45,7 @@ export default function ThemeSection(): ReactElement {
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => setVariant(e.target.value)}
                 >
                   {variants.map((v) => (
-                    <option id={v} key={v} value={v}>{capitalize(v)}</option>
+                    <option className='variant' id={v} key={v} value={v}>{capitalize(v)}</option>
                   ))}
                 </select>
               </span>
