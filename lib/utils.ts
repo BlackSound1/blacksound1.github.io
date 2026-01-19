@@ -39,3 +39,12 @@ export function darkenHex(hex: string, percent: number): string {
 
   return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
+
+/**
+ * Capitalizes the first letter of a given string and returns the result as a new string.
+ * @param str The string to capitalize.
+ * @returns A version of the given string with a capitalized first letter.
+ */
+export function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}

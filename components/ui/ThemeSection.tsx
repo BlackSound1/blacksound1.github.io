@@ -4,6 +4,7 @@ import { ChangeEvent, ReactElement } from 'react';
 
 import { THEME_VARIANTS, useTheme } from '@/context/ThemeContext';
 import { Card, CardContent } from './card';
+import { capitalize } from '@/lib/utils';
 
 export default function ThemeSection(): ReactElement {
   const { theme, setTheme, variant, setVariant, variants } = useTheme();
@@ -31,7 +32,7 @@ export default function ThemeSection(): ReactElement {
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
                 >
                   {themes.map((t) => (
-                    <option key={t} value={t}>{t}</option>
+                    <option key={t} value={t}>{capitalize(t)}</option>
                   ))}
                 </select>
               </span>
@@ -44,7 +45,7 @@ export default function ThemeSection(): ReactElement {
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => setVariant(e.target.value)}
                 >
                   {variants.map((v) => (
-                    <option key={v} value={v}>{v}</option>
+                    <option id={v} key={v} value={v}>{capitalize(v)}</option>
                   ))}
                 </select>
               </span>
