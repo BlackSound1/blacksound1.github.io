@@ -22,26 +22,27 @@ export default function ThemeSection(): ReactElement {
           <CardContent>
             <div className="grid grid-cols-2">
               <span>
+                <div className='font-semibold'>Choose a theme</div>
+
                 <select
                   name="theme"
                   id="theme"
                   value={theme}
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
                 >
-                  <option disabled value="message">CHOOSE A THEME</option>
                   {themes.map((t) => (
                     <option key={t} value={t}>{t}</option>
                   ))}
                 </select>
               </span>
               <span>
+                <div className="font-semibold">Choose a variant</div>
                 <select
                   name="variant"
                   id="variant"
                   value={variant}
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => setVariant(e.target.value)}
                 >
-                  <option disabled value="message">CHOOSE A VARIANT</option>
                   {variants.map((v) => (
                     <option key={v} value={v}>{v}</option>
                   ))}
