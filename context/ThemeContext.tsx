@@ -95,6 +95,16 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     localStorage.setItem('variant', variant);
   }, [variant]);
 
+  // Add/ change data attributes on root for theme and variant
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+        return;
+    }
+    const root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-variant', variant);
+  }, [theme, variant]);
+
   const value = useMemo(
     () => ({ theme, setTheme, variants, setVariants, variant, setVariant }),
     [theme, setTheme, variants, setVariants, variant, setVariant],

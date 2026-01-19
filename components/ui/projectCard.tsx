@@ -42,7 +42,7 @@ export default function ProjectCard({
       target="_blank"
       rel="noopener noreferrer"
       title={name + ': ' + description}
-      className="block h-full"
+      className="block h-full project-card"
       onClick={() => posthog.capture('project-clicked', { project: name })}
     >
       <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
