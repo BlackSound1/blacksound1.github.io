@@ -44,15 +44,15 @@ export default function ProjectCard({
       className="block h-full project-card"
       onClick={() => posthog.capture('project-clicked', { project: name })}
     >
-      <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none">
+      <Card className="bg-mantle hover:border-accent focus-visible:border-accent group h-full flex flex-col overflow-hidden rounded-xl border shadow-lg transition-all duration-200 hover:shadow-xl focus:outline-none">
         <CardHeader>
-          <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors">
+          <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors duration-200">
             {name}
           </CardTitle>
         </CardHeader>
         <CardContent className="flex-1">
           {imagePath && (
-            <div className="mx-auto w-full mb-6 h-80 md:h-56 lg:h-44 flex items-center justify-center overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+            <div className="mx-auto w-full mb-6 h-80 md:h-56 lg:h-44 flex items-center justify-center overflow-hidden transform transition-transform duration-200 group-hover:scale-105">
               <Image
                 src={imagePath}
                 alt={alt}

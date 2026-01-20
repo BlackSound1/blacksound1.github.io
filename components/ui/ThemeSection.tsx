@@ -19,7 +19,7 @@ export default function ThemeSection(): ReactElement {
         </h3>
       </div>
       <div className="grid grid-cols-1 gap-6">
-        <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors shadow-lg hover:shadow-xl">
+        <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors duration-200 shadow-lg hover:shadow-xl">
           <CardContent>
             <div className="grid grid-cols-2">
               <span>

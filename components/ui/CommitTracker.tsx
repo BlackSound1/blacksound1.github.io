@@ -39,7 +39,7 @@ export default function CommitTracker(): ReactElement {
   }, []);
 
   return (
-    <div id="commit-tracker" className="flex flex-wrap items-center justify-center hover:text-accent transition-colors">
+    <div id="commit-tracker" className="flex flex-wrap items-center justify-center hover:text-accent transition-colors duration-200">
       {/* Commit SVG */}
       <svg 
         xmlns="http://www.w3.org/2000/svg"
