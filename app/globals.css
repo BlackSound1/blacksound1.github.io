@@ -90,16 +90,8 @@ section {
     background-color: #dce0e8;
   }
 
-  .tag-path {
-    stroke: var(--text);
-  }
-
   .tag-path, .social-path, .commit-path {
-    stroke: var(--text);
-  }
-
-  .tag-path:hover, .social-path:hover, .commit-path:hover {
-    stroke: var(--sc-color);
+    stroke: currentColor;
   }
 }
 
@@ -134,11 +126,7 @@ section {
   }
 
   .tag-path, .social-path, .commit-path {
-    stroke: var(--text);
-  }
-
-  .tag-path:hover, .social-path:hover, .commit-path:hover {
-    stroke: var(--sc-color);
+    stroke: currentColor;
   }
 }
 
@@ -177,11 +165,7 @@ section {
   }
 
   .tag-path, .social-path, .commit-path {
-    stroke: var(--text);
-  }
-
-  .tag-path:hover, .social-path:hover, .commit-path:hover {
-    stroke: var(--sc-color);
+    stroke: currentColor;
   }
 }
 
@@ -220,11 +204,7 @@ section {
   }
 
   .tag-path, .social-path, .commit-path {
-    stroke: var(--text);
-  }
-
-  .tag-path:hover, .social-path:hover, .commit-path:hover {
-    stroke: var(--sc-color);
+    stroke: currentColor;
   }
 }
 
