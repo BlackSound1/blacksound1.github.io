@@ -1,8 +1,5 @@
 import { ReactElement } from 'react';
 
-import GitHubLogo from '@/public/github.svg';
-import LinkedInLogo from '@/public/linkedin.svg';
-
 import SocialLink from './SocialLink';
 
 /**
@@ -22,8 +19,8 @@ export default function AboutMeSection(): ReactElement {
         This site is a <span className="text-accent">work in progress</span>
       </p>
       <div className="flex flex-wrap items-center gap-x-4 pt-2">
-        <SocialLink name="GitHub" url="https://github.com/BlackSound1" logo={GitHubLogo} />
-        <SocialLink name="LinkedIn" url="https://www.linkedin.com/in/ordon/" logo={LinkedInLogo} />
+        <SocialLink name="GitHub" url="https://github.com/BlackSound1" />
+        <SocialLink name="LinkedIn" url="https://www.linkedin.com/in/ordon/" />
       </div>
     </section>
   );

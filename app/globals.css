@@ -54,8 +54,7 @@ section {
 :root[data-theme='default'] {
   --background: #f5f5f5;
   --text: var(--muted-foreground);
-  /* --muted-foreground: oklch(0.556 0 0); */
-  /* --card-foreground: oklch(0.556 0 0); */
+
   .tag-path {
     stroke: var(--text);
   }
@@ -94,6 +93,14 @@ section {
   .tag-path {
     stroke: var(--text);
   }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: var(--text);
+  }
+
+  .tag-path:hover, .social-path:hover, .commit-path:hover {
+    stroke: var(--sc-color);
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='mocha'] {
@@ -126,8 +133,12 @@ section {
     background-color: #bac2de;
   }
 
-  .tag-path {
+  .tag-path, .social-path, .commit-path {
     stroke: var(--text);
+  }
+
+  .tag-path:hover, .social-path:hover, .commit-path:hover {
+    stroke: var(--sc-color);
   }
 }
 
@@ -164,6 +175,14 @@ section {
   .tag-path {
     stroke: var(--text);
   }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: var(--text);
+  }
+
+  .tag-path:hover, .social-path:hover, .commit-path:hover {
+    stroke: var(--sc-color);
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='macchiato'] {
@@ -198,6 +217,14 @@ section {
 
   .tag-path {
     stroke: var(--text);
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: var(--text);
+  }
+
+  .tag-path:hover, .social-path:hover, .commit-path:hover {
+    stroke: var(--sc-color);
   }
 }
 
