@@ -1,6 +1,7 @@
 'use client';
 
 import { ChangeEvent, ReactElement } from 'react';
+import posthog from 'posthog-js';
 
 import { THEME_VARIANTS, useTheme } from '@/context/ThemeContext';
 import { Card, CardContent } from './card';
@@ -29,7 +30,11 @@ export default function ThemeSection(): ReactElement {
                   name="theme"
                   id="theme"
                   value={theme}
-                  onChange={(e: ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
+                  onChange={(e: ChangeEvent<HTMLSelectElement>) => {
+                    const newTheme = e.target.value;
+                    setTheme(newTheme);
+                    posthog.capture('theme-changed', { newTheme: newTheme });
+                  }}
                 >
                   {themes.map((t) => (
                     <option className='theme' key={t} value={t}>{capitalize(t)}</option>
@@ -42,7 +47,11 @@ export default function ThemeSection(): ReactElement {
                   name="variant"
                   id="variant"
                   value={variant}
-                  onChange={(e: ChangeEvent<HTMLSelectElement>) => setVariant(e.target.value)}
+                  onChange={(e: ChangeEvent<HTMLSelectElement>) => {
+                    const newVariant = e.target.value;
+                    setVariant(newVariant);
+                    posthog.capture('variant-changed', { newVariant: newVariant });
+                  }}
                 >
                   {variants.map((v) => (
                     <option className='variant' id={v} key={v} value={v}>{capitalize(v)}</option>
