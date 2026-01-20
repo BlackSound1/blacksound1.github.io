@@ -1,9 +1,6 @@
 'use client';
 
-import Image from 'next/image';
 import { ReactElement, useEffect, useState } from 'react';
-
-import Commit from '@/public/commit.svg';
 
 /**
  * Queries GitHub for the latest commit to the `main` branch and displays the result.
@@ -42,8 +39,24 @@ export default function CommitTracker(): ReactElement {
   }, []);
 
   return (
-    <div id="commit-tracker" className="flex flex-wrap items-center justify-center hover:text-accent transition-colors">
-      <Image src={Commit} height={18} alt="Commit" />
+    <div id="commit-tracker" className="flex flex-wrap items-center justify-center hover:text-accent transition-colors duration-200">
+      {/* Commit SVG */}
+      <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-git-commit"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+        <path d="M12 3l0 6" />
+        <path d="M12 15l0 6" />
+      </svg>
       {commit}
     </div>
   );

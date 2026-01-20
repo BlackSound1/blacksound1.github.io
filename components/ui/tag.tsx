@@ -41,7 +41,7 @@ const _fetchColor = (technology: string): string => {
 export default function Tag({ lang }: TagProps): ReactElement {
     return (
         <span
-          className="bg-[#eee] rounded-2xl px-2 py-1 font-semibold font-mono"
+          className="bg-[#eee] tag rounded-2xl px-2 py-1 font-semibold font-mono"
           style={{color: _fetchColor(lang)}}
         >
           {lang}
