@@ -25,7 +25,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const THEME_VARIANTS: Record<string, string[]> = {
   default: ['default'],
-  catpuccin: ['latte', 'mocha', 'frappe', 'macchiato'],
+  catpuccin: ['latte', 'frappe', 'macchiato', 'mocha'],
 };
 
 /**
