@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactElement, useState } from "react";
+import { ReactElement, useRef, useState } from "react";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
 
 import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
@@ -11,6 +11,7 @@ const allThemes = Array.from(Object.keys(THEME_VARIANTS));
 export default function ThemeDropdown(): ReactElement {
     const [isOpen, setIsOpen] = useState(false);
     const { theme, setTheme, setVariant } = useTheme();
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -22,9 +23,22 @@ export default function ThemeDropdown(): ReactElement {
         setIsOpen(false);
     };
 
+    // Handle blur event. Check if the active element is not inside the dropdown, and if so, close the dropdown.
+    const handleBlur = () => {
+        setTimeout(() => {
+            if (!dropdownRef.current?.contains(document.activeElement)) {
+                setIsOpen(false);
+            }
+        }, 0);
+    };
+
     return (
         <div className="flex justify-left">
-            <div className="relative inline-block text-left">
+            <div
+                className="relative inline-block text-left"
+                ref={dropdownRef}
+                onBlur={handleBlur}
+            >
                 <button 
                     type="button"
                     className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-black hover:bg-gray-50"

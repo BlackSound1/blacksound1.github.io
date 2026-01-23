@@ -1,12 +1,13 @@
 'use client';
 
 import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
-import { ReactElement, useState } from "react";
+import { ReactElement, useRef, useState } from "react";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
 
 export default function VariantDropdown(): ReactElement {
     const [isOpen, setIsOpen] = useState(false);
     const { theme, variant, setVariant} = useTheme();
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -17,9 +18,25 @@ export default function VariantDropdown(): ReactElement {
         setIsOpen(false);
     }
 
+    // Use the ref to determine if the active element is in the dropdown. If not, close it.
+    const handleBlur = () => {
+        setTimeout(() => {
+            if (!dropdownRef.current?.contains(document.activeElement)) {
+                setIsOpen(false);
+            }
+        }, 0);
+    };
+
     return (
         <div className="flex justify-left">
-            <div className="relative inline-block text-left">
+            <div
+                className="relative inline-block text-left"
+                // Associates this div with the ref object.
+                // "After React creates the DOM node and puts it on the screen,
+                // React will set the current property of your ref object to that DOM node."
+                ref={dropdownRef}
+                onBlur={handleBlur}
+            >
                 <button
                     type="button"
                     className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-black hover:bg-gray-50"
