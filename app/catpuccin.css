@@ -33,13 +33,13 @@
   }
 
   .dropdown-button, .dropdown-option {
-    background-color: #eff1f5;
-    color: #1e66f5;
+    background-color: #eff1f5; /* Base */
+    color: #1e66f5; /* Blue */
   }
 
   .dropdown-button:hover, .dropdown-option:hover {
-    background-color: #e6e9ef;
-    color: #7287fd;
+    background-color: #e6e9ef; /* Mantle */
+    color: #7287fd; /* Lavender */
   }
 }
 
@@ -80,6 +80,16 @@
   .tag-path, .social-path, .commit-path {
     stroke: currentColor;
   }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #303446; /* Base */
+    color: #8caaee; /* Blue */
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #292c3c; /* Mantle */
+    color: #babbf1; /* Lavender */
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='macchiato'] {
@@ -119,6 +129,16 @@
   .tag-path, .social-path, .commit-path {
     stroke: currentColor;
   }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #24273a; /* Base */
+    color: #8aadf4; /* Blue */
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #1e2030; /* Mantle */
+    color: #b7bdf8; /* Lavender */
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='mocha'] {
@@ -153,5 +173,15 @@
 
   .tag-path, .social-path, .commit-path {
     stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #1e1e2e; /* Base */
+    color: #89b4fa; /* Blue */
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #181825; /* Mantle */
+    color: #b4befe; /* Lavender */
   }
 }
