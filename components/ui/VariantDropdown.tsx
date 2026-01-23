@@ -43,12 +43,7 @@ export default function VariantDropdown(): ReactElement {
                     onClick={toggleDropdown}
                 >
                     {variant}
-
-                    {isOpen ? (
-                        <FaCaretDown className="ml-2" />
-                    ): (
-                        <FaCaretRight className="ml-2" />
-                    )}
+                    {isOpen ? <FaCaretDown className="ml-2 mt-0.5" /> : <FaCaretRight className="ml-2 mt-0.5" />}
                 </button>
 
                 {isOpen && (

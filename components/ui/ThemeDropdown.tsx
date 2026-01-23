@@ -45,12 +45,7 @@ export default function ThemeDropdown(): ReactElement {
                     onClick={toggleDropdown}
                 >
                     {theme}
-
-                    {isOpen ? (
-                        <FaCaretDown className="ml-2" />
-                    ): (
-                        <FaCaretRight className="ml-2" />
-                    )}
+                    {isOpen ? <FaCaretDown className="ml-2 mt-0.5" /> : <FaCaretRight className="ml-2 mt-0.5" />}
                 </button>
 
                 {isOpen && (
