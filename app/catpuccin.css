@@ -31,6 +31,16 @@
   .tag-path, .social-path, .commit-path {
     stroke: currentColor;
   }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #eff1f5;
+    color: #1e66f5;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #e6e9ef;
+    color: #7287fd;
+  }
 }
 
 :root[data-theme='catpuccin'][data-variant='frappe'] {
