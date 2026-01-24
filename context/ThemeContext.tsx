@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from "react";
 
 type ThemeContextType = {
     theme: string;
@@ -22,25 +22,16 @@ export const THEME_VARIANTS: Record<string, string[]> = {
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<string>("default-default");
 
-    const isRestoringRef = useRef(false);
-
     // Restore saved state once on mount (client-only)
     useEffect(() => {
         if (typeof window === 'undefined') {
             return;
         }
 
-        isRestoringRef.current = true;
-
         const storedTheme = localStorage.getItem('theme');
-
         const targetTheme = storedTheme ?? 'default-default';
 
         setTheme(targetTheme);
-
-        setTimeout(() => {
-            isRestoringRef.current = false;
-        }, 0);
     }, []);
 
     // Update local storage when theme changes
