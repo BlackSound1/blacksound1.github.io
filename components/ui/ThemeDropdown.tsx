@@ -1,30 +1,32 @@
 'use client';
 
-import { ReactElement, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
 
-import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
 import { capitalize } from "@/lib/utils";
+import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
 
 
 const allThemes = Array.from(Object.keys(THEME_VARIANTS));
 
 export default function ThemeDropdown(): ReactElement {
     const [isOpen, setIsOpen] = useState(false);
-    const { theme, setTheme, setVariant } = useTheme();
+    const [themeOnly, setThemeOnly] = useState('default');
+    const { theme, setTheme } = useTheme();
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
+    // When a theme is selected, find its 0th variant and set the theme based on that
     const handleSelect = (selectedTheme: string) => {
-        setTheme(selectedTheme);
-        setVariant(THEME_VARIANTS[selectedTheme][0]);
+        const defaultVariant = THEME_VARIANTS[selectedTheme][0];
+        setTheme(`${selectedTheme}-${defaultVariant}`);
         setIsOpen(false);
     };
 
-    // Handle blur event. Check if the active element is not inside the dropdown, and if so, close the dropdown.
+    // On blur, check if the active element is not inside the dropdown, and if so, close the dropdown.
     const handleBlur = () => {
         setTimeout(() => {
             if (!dropdownRef.current?.contains(document.activeElement)) {
@@ -32,6 +34,11 @@ export default function ThemeDropdown(): ReactElement {
             }
         }, 0);
     };
+
+    // Update the theme and variant as distinct names whenever the theme-variant name changes
+    useEffect(() => {
+        setThemeOnly(theme.split('-')[0]);
+    }, [theme]);
 
     return (
         <div className="mt-1 flex justify-left">
@@ -45,7 +52,7 @@ export default function ThemeDropdown(): ReactElement {
                     className="dropdown-button inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-black hover:bg-gray-50"
                     onClick={toggleDropdown}
                 >
-                    {capitalize(theme)}
+                    {capitalize(themeOnly)}
                     {isOpen ? <FaCaretDown className="ml-2 mt-0.5" /> : <FaCaretRight className="ml-2 mt-0.5" />}
                 </button>
 

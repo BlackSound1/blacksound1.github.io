@@ -1,21 +1,40 @@
 'use client';
 
+import { ReactElement, useEffect, useRef, useState } from "react";
+import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
+
 import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
 import { capitalize } from "@/lib/utils";
-import { ReactElement, useRef, useState } from "react";
-import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
+
+const allThemes = Array.from(Object.keys(THEME_VARIANTS));
 
 export default function VariantDropdown(): ReactElement {
     const [isOpen, setIsOpen] = useState(false);
-    const { theme, variant, setVariant} = useTheme();
+    const { theme, setTheme } = useTheme();
+    const [themeOnly, setThemeOnly] = useState('default');
+    const [variantOnly, setVariantOnly] = useState('default');
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
+    // Given a variant, figure out which theme it belongs to, then set the theme
     const handleSelect = (selectedVariant: string) => {
-        setVariant(selectedVariant);
+        let t: string | null = null;
+
+        for (let possibleTheme of allThemes) {
+            if (THEME_VARIANTS[possibleTheme].includes(selectedVariant)) {
+                t = possibleTheme;
+                break;
+            }
+        }
+
+        if (!t) {
+            setTheme('default-default');
+        } else {
+            setTheme(`${t}-${selectedVariant}`);
+        }
         setIsOpen(false);
     }
 
@@ -27,6 +46,12 @@ export default function VariantDropdown(): ReactElement {
             }
         }, 0);
     };
+
+    // Update the theme and variant as distinct names whenever the theme-variant name changes
+    useEffect(() => {
+        setThemeOnly(theme.split('-')[0]);
+        setVariantOnly(theme.split('-')[1]);
+    }, [theme]);
 
     return (
         <div className="mt-1 flex justify-left">
@@ -43,21 +68,21 @@ export default function VariantDropdown(): ReactElement {
                     className="dropdown-button inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-black hover:bg-gray-50"
                     onClick={toggleDropdown}
                 >
-                    {capitalize(variant)}
+                    {capitalize(variantOnly)}
                     {isOpen ? <FaCaretDown className="ml-2 mt-0.5" /> : <FaCaretRight className="ml-2 mt-0.5" />}
                 </button>
 
                 {isOpen && (
                     <div className="origin-top-right absolute w-full right-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="">
-                            {THEME_VARIANTS[theme].map((theme) => (
+                            {THEME_VARIANTS[themeOnly].map((variant) => (
                                 <button
-                                    key={theme}
+                                    key={variant}
                                     type="button"
                                     className="dropdown-option block text-left px-4 py-2 text-sm w-full text-black hover:bg-gray-100"
-                                    onClick={() => handleSelect(theme)}
+                                    onClick={() => handleSelect(variant)}
                                 >
-                                    {capitalize(theme)}
+                                    {capitalize(variant)}
                                 </button>
                             ))}
                         </div>

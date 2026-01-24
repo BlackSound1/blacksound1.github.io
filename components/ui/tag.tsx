@@ -1,5 +1,6 @@
-import { useTheme } from '@/context/ThemeContext';
 import { ReactElement, useEffect, useState } from 'react';
+
+import { useTheme } from '@/context/ThemeContext';
 
 interface TagProps {
   lang: string;
@@ -16,11 +17,11 @@ const tagColorMap: Record<string, string[]> = {
 
 /**
  * Return an randomly-chosen color based on the current variant.
- * @param v The theme variant to choose a color from.
+ * @param variant The theme variant to choose a color from.
  * @returns A randomly-chosen color based on the current variant.
  */
-const _fetchColor = (v: string): string => {
-  const colorChoices = tagColorMap[v] ?? tagColorMap['default'];
+const _fetchColor = (variant: string): string => {
+  const colorChoices = tagColorMap[variant] ?? tagColorMap['default'];
   return colorChoices[Math.floor(Math.random() * colorChoices.length)];
 }
 
@@ -30,12 +31,13 @@ const _fetchColor = (v: string): string => {
  * @returns {ReactElement} A \<span\> dedicated to a single technology tag.
  */
 export default function Tag({ lang }: TagProps): ReactElement {
-  const { variant } = useTheme();
+  const { theme } = useTheme();
   const [color, setColor] = useState<string>('black');
 
+  // Set the tag color based on the variant
   useEffect(() => {
-    setColor(_fetchColor(variant));
-  }, [variant]);
+    setColor(_fetchColor(theme.split('-')[1]));
+  }, [theme]);
 
     return (
         <span
