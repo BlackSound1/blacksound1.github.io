@@ -1,5 +1,6 @@
 'use client';
 
+import posthog from "posthog-js";
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from "react";
 
 type ThemeContextType = {
@@ -47,6 +48,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
         const root = document.documentElement;
         root.setAttribute('data-theme', theme);
+        posthog.capture('theme-changed', { newTheme: theme });
     }, [theme]);
 
     // Only recompute when deps change
