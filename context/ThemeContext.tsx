@@ -101,8 +101,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         return;
     }
     const root = document.documentElement;
-    root.setAttribute('data-theme', theme);
-    root.setAttribute('data-variant', variant);
+    root.setAttribute('data-theme', `${theme}-${variant}`);
   }, [theme, variant]);
 
   const value = useMemo(
