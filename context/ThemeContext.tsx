@@ -1,7 +1,7 @@
 'use client';
 
 import posthog from "posthog-js";
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 type ThemeContextType = {
     theme: string;
@@ -22,6 +22,14 @@ export const THEME_VARIANTS: Record<string, string[]> = {
  */
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<string>("default-default");
+    const userInitiatedRef = useRef<boolean>(false);
+
+    // When using setTheme throughout the app, actually use this instead
+    // to let the context know it's a user-defined action
+    const setThemeUser: Dispatch<SetStateAction<string>> = useCallback((value) => {
+        userInitiatedRef.current = true;
+        setTheme(value as any);
+    }, [setTheme]);
 
     // Restore saved state once on mount (client-only)
     useEffect(() => {
@@ -48,13 +56,22 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
         const root = document.documentElement;
         root.setAttribute('data-theme', theme);
+
+        // Only capture if change was explicitly user-initiated
+        if (!userInitiatedRef.current) {
+            return;
+        }
+
         posthog.capture('theme-changed', { newTheme: theme });
+
+        // Reset flag after capturing
+        userInitiatedRef.current = false;
     }, [theme]);
 
     // Only recompute when deps change
     const value = useMemo(
-        () => ({ theme, setTheme }),
-        [theme, setTheme]
+        () => ({ theme, setTheme: setThemeUser }),
+        [theme, setThemeUser]
     );
 
     return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
