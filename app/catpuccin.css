@@ -1,4 +1,4 @@
-:root[data-theme='catpuccin'][data-variant='latte'] {
+:root[data-theme='catpuccin-latte'] {
   --text: #4c4f69;
   --background: #e6e9ef;
   --card-foreground: var(--text);
@@ -43,7 +43,7 @@
   }
 }
 
-:root[data-theme='catpuccin'][data-variant='frappe'] {
+:root[data-theme='catpuccin-frappe'] {
   --text: #c6d0f5;
   --background: #292c3c;
   --card-foreground: var(--text);
@@ -92,7 +92,7 @@
   }
 }
 
-:root[data-theme='catpuccin'][data-variant='macchiato'] {
+:root[data-theme='catpuccin-macchiato'] {
   --text: #cad3f5;
   --background: #1e2030;
   --card-foreground: var(--text);
@@ -141,7 +141,7 @@
   }
 }
 
-:root[data-theme='catpuccin'][data-variant='mocha'] {
+:root[data-theme='catpuccin-mocha'] {
   --text: #cdd6f4;
   --background: #181825;
   --card-foreground: var(--text);
