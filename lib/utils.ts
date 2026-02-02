@@ -81,4 +81,16 @@ export const tagColorMap: Record<string, string[]> = {
     '#a6e3a1', '#94e2d5', '#89dceb', '#74c7ec',
     '#89b4fa', '#b4befe'
   ],
+
+  // Everforest
+  'everforest-light': [
+    '#f85552', '#f57d26', '#dfa000', '#8da101',
+    '#35a77c', '#3a94c5', '#df69ba', '#93b259',
+    '#708089', '#e66868'
+  ],
+  'everforest-dark': [
+    '#e67e80', '#e69875', '#dbbc7f', '#a7c080',
+    '#83c092', '#7fbbb3', '#d699b9', '#a7c080',
+    '#d3c6aa', '#e67e80'
+  ],
 }
