@@ -48,3 +48,37 @@ export function darkenHex(hex: string, percent: number): string {
 export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+export const tagColorMap: Record<string, string[]> = {
+  // Default
+  'default-default': [
+    '#1C71D8', '#2EC27E', '#F5C211', '#E66100',
+    '#C01C28', '#813D9C', '#865E3C'
+  ],
+
+  // Catpuccin
+  'catpuccin-latte': [
+    '#dc8a78', '#dd7878', '#ea76cb', '#8839ef',
+    '#d20f39', '#e64553', '#fe640b', '#df8e1d',
+    '#40a02b', '#179299', '#04a5e5', '#209fb5',
+    '#1e66f5', '#7287fd'
+  ],
+  'catpuccin-frappe': [
+    '#f2d5cf', '#eebebe', '#f4b8e4', '#ca9ee6',
+    '#e78284', '#ea999c', '#ef9f76', '#e5c890',
+    '#a6d189', '#81c8be', '#99d1db', '#85c1dc',
+    '#8caaee', '#babbf1'
+  ],
+  'catpuccin-macchiato': [
+    '#f4dbd6', '#f0c6c6', '#f5bde6', '#c6a0f6',
+    '#ed8796', '#ee99a0', '#f5a97f', '#eed49f',
+    '#a6da95', '#8bd5ca', '#91d7e3', '#7dc4e4',
+    '#8aadf4', '#b7bdf8'
+  ],
+  'catpuccin-mocha': [
+    '#f5e0dc', '#f2cdcd', '#f5c2e7', '#cba6f7',
+    '#f38ba8', '#eba0ac', '#fab387', '#f9e2af',
+    '#a6e3a1', '#94e2d5', '#89dceb', '#74c7ec',
+    '#89b4fa', '#b4befe'
+  ],
+}
