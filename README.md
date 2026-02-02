@@ -7,6 +7,18 @@ Not being a frontend -focused dev, I decided to just make a simple single-page s
 
 Deployed At: https://blacksound1-portfolio.vercel.app/
 
+## Features
+
+- My social links
+- My work experience
+- My projects
+- A theme selector (themes persist on reload):
+  - My own default theme
+  - Catpuccin (4 modes)
+  - Everforest (2 modes)
+- An accent color picker to choose an arbitrary accent color for the site (persists on reload)
+- A Soundcloud embed of my music. Can be styled by the accent color (persistent on reload). Since styling the Soundcloud embed requires reloading it after sending a request for a different color, there's a checkbox to prevent reloading on style change in case you were listening to a song. Won't re-style the embed until the checkbox is unchecked.
+
 ## Stack
 
 - NextJS (React meta-framework)
