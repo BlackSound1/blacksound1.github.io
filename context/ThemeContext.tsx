@@ -24,6 +24,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const THEME_VARIANTS: Record<string, string[]> = {
   default: ['default'],
   catpuccin: ['latte', 'frappe', 'macchiato', 'mocha'],
+  everforest: ['light', 'dark'],
 };
 
 /**
