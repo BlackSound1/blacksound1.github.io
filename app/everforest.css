@@ -1,6 +1,6 @@
 :root[data-theme='everforest-light'] {
   --text: #5c6a72;
-  --background: #efebd4;
+  --background: #F4F0D9;
   --card-foreground: var(--text);
   --muted-foreground: var(--text);
 
@@ -25,7 +25,7 @@
   }
 
   .tag {
-    background-color: #f4f0d9;
+    background-color: #FDF6E3;
   }
 
   .tag-path, .social-path, .commit-path {
@@ -33,19 +33,19 @@
   }
 
   .dropdown-button, .dropdown-option {
-    background-color: #f4f0d9;
+    background-color: #FDF6E3;
     color: #3a94c5;
   }
 
   .dropdown-button:hover, .dropdown-option:hover {
-    background-color: #eae4ca;
+    background-color: #F4F0D9;
     color: #f57d26;
   }
 }
 
 :root[data-theme='everforest-dark'] {
   --text: #d3c6aa;
-  --background: #232a2e;
+  --background: #2D353B;
   --card-foreground: var(--text);
   --muted-foreground: var(--text);
 
