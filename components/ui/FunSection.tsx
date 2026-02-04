@@ -15,7 +15,7 @@ export default function FunSection(): ReactElement {
         <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Fun Stuff</h2>
       </div>
 
-      <div className="grid sm:grid-cols-1 lg:grid-cols-2 ">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 ">
         {/* Themes */}
         <ThemeSection />
 

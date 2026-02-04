@@ -17,15 +17,15 @@ export default function ColorPickerSection(): ReactElement {
   const { checked, setChecked } = useColorCheckbox();
 
   return (
-    <section id="color-picker-section" className="px-4">
+    <section id="color-picker-section" className="px-4 md:col-span-2">
       <div className="mb-8">
-        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent">Color Picker</h3>
+        <h3 className="text-left gap-3 text-xl font-semibold md:text-2xl font-mono hover:text-accent">Accent Color Picker</h3>
       </div>
-      <div className="grid grid-cols-1 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:auto-rows-[minmax(0,206px)]">
         <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors duration-200 shadow-lg hover:shadow-xl">
           <CardHeader>
             <CardTitle className="text-text group-hover:text-accent text-xl font-semibold transition-colors duration-200">
-              Use this color picker to change the accent color of the site
+              Change the accent color of the site
             </CardTitle>
           </CardHeader>
           <CardContent>
