@@ -31,3 +31,4 @@ Deployed At: https://blacksound1-portfolio.vercel.app/
 - PNPM (package manager)
 - PostHog (Analytics)
 - Prettier (Formatter)
+- Just (Command runner)
