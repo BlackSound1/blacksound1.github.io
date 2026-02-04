@@ -23,7 +23,7 @@ export default function VariantDropdown(): ReactElement {
   const handleSelect = (selectedVariant: string) => {
     let t: string | null = null;
 
-    for (let possibleTheme of allThemes) {
+    for (const possibleTheme of allThemes) {
       if (THEME_VARIANTS[possibleTheme].includes(selectedVariant)) {
         t = possibleTheme;
         break;

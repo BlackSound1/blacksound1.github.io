@@ -2,7 +2,6 @@ import { ReactElement } from 'react';
 
 import { Card, CardContent, CardDescription } from './card';
 import CommitTracker from './CommitTracker';
-import StatusIndicator from './status-indicator';
 import ViewCounter from './ViewCounter';
 
 /**
