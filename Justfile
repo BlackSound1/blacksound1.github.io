@@ -10,7 +10,7 @@ lint:
     @echo "Linting..."
     @pnpm run lint
 
-# Dev
+# Building
 [group('Building')]
 [arg('type', pattern='dev|build|start')]
 build type='dev':
