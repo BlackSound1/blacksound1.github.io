@@ -17,12 +17,12 @@ export default function ThemeSection(): ReactElement {
       <div className="grid grid-cols-1 gap-6">
         <Card className="bg-mantle hover:border-accent focus-visible:border-accent transition-colors duration-200 shadow-lg hover:shadow-xl">
           <CardContent>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 lg:grid-cols-1">
               <span>
                 <div className='font-semibold'>Choose a theme</div>
                 <ThemeDropdown />
               </span>
-              <span>
+              <span className='lg:mt-6'>
                 <div className="font-semibold">Choose a variant</div>
                 <VariantDropdown />
               </span>

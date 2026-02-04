@@ -15,12 +15,13 @@ export default function FunSection(): ReactElement {
         <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">Fun Stuff</h2>
       </div>
 
-      {/* Themes */}
-      <ThemeSection />
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 ">
+        {/* Themes */}
+        <ThemeSection />
 
-      {/* Color Picker */}
-      <ColorPickerSection />
-
+        {/* Color Picker */}
+        <ColorPickerSection />
+      </div>
 
       {/* Music */}
       <MusicSection />

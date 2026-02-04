@@ -20,7 +20,9 @@ export default function WorkSection(): ReactElement {
           url="https://verbit.ai/"
           title="Software Engineer"
           time="Feb. 2025 - Sep. 2025"
-          description={<>Helped build the next generation of Verbit&apos;s realtime captioning solution.</>}
+          description={
+            <>Helped build the next generation of North America&apos;s largest realtime captioning solution.</>
+          }
         />
         <WorkCard
           company="Tecsys"

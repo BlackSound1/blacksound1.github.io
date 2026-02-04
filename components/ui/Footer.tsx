@@ -21,13 +21,6 @@ export default function Footer(): ReactElement {
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 md:justify-start">
               <span className="hover:text-accent transition-colors duration-200">&copy;2026 BlackSound1</span>
               <span className="hidden md:inline"></span>
-              <div>
-                <StatusIndicator
-                  state="active"
-                  label="All Systems Go!"
-                  labelClassName="text-muted-foreground hover:text-accent transition-colors duration-200"
-                />
-              </div>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 md:justify-end mt-3 md:mt-0">
               <ViewCounter />

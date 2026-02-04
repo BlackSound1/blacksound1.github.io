@@ -53,7 +53,7 @@ export default function ThemeDropdown(): ReactElement {
         </button>
 
         {isOpen && (
-          <div className="origin-top-right absolute w-full right-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="origin-top-right absolute z-10 w-full right-0 mt-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="">
               {allThemes.map((theme) => (
                 <button
