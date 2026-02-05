@@ -36,7 +36,7 @@ export default function ProjectSection(): ReactElement {
           link="https://github.com/BlackSound1/BlackSound1-portfolio"
           imagePath="/static/images/PortfolioScreenshot.png"
           alt="This site"
-          technologies={['TS', 'NextJS', 'HTML', 'CSS', 'Web']}
+          technologies={['TS', 'NextJS', 'HTML', 'CSS', 'Web', 'Just', 'NodeJS']}
           description="A simple, WIP portfolio site. You're on it now!"
         />
         <ProjectCard

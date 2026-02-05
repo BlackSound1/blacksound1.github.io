@@ -4,11 +4,14 @@ import posthog from 'posthog-js';
 import { ReactElement } from 'react';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Tag from './tag';
+import TagIcon from './TagIcon';
 
 interface WorkProps {
   company: string;
   title: string;
   time: string;
+  technologies: string[];
   description: ReactElement;
   url: string;
 }
@@ -19,10 +22,18 @@ interface WorkProps {
  * @param title My job title.
  * @param time The time I worked there.
  * @param description A brief job description and some accomplishments.
+ * @param technologies A list of technologies used during this job.
  * @param url A link to the company's page
  * @returns {ReactElement} A clickable card showing an individual work experience.
  */
-export default function WorkCard({ company, title, time, description, url }: WorkProps): ReactElement {
+export default function WorkCard({ 
+  company,
+  title,
+  time,
+  technologies,
+  description,
+  url
+}: WorkProps): ReactElement {
   return (
     <a
       href={url}
@@ -42,6 +53,12 @@ export default function WorkCard({ company, title, time, description, url }: Wor
         </CardHeader>
         <CardContent>
           <CardDescription>
+            <div className="flex flex-wrap mt-2 gap-2 overflow-hidden text-xs">
+              <TagIcon />
+              {technologies.map((name) => {
+                return <Tag key={name} lang={name} />;
+              })}
+            </div>
             <p className="mt-2 font-semibold">{description}</p>
           </CardDescription>
         </CardContent>
