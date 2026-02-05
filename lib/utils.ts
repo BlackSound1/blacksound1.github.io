@@ -93,4 +93,13 @@ export const tagColorMap: Record<string, string[]> = {
     '#83c092', '#7fbbb3', '#d699b9', '#a7c080',
     '#d3c6aa', '#e67e80'
   ],
+
+  // Nord
+  'nord-snow storm': [
+    '#8fbcbb', '#88c0d0', '#81a1c1', '#5e81ac',
+  ],
+  'nord-polar night': [
+    '#bf616a', '#d08770', '#ebcb8b', '#a3be8c',
+    '#b48ead'
+  ],
 }

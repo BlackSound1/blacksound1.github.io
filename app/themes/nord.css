@@ -1,19 +1,19 @@
 :root[data-theme='nord-snow storm'] {
-  --text: red;
-  --background: #f4f0d9;
+  --text: #4c566a;
+  --background: #eceff4;
   --card-foreground: var(--text);
   --muted-foreground: var(--text);
 
   h1 {
-    color: #93b259;
+    color: #5e81ac;
   }
 
   h2 {
-    color: #e66868;
+    color: #81a1c1;
   }
 
   h3 {
-    color: #708089;
+    color: #88c0d0;
   }
 
   p, a, .project-card {
@@ -25,7 +25,7 @@
   }
 
   .tag {
-    background-color: #fdf6e3;
+    background-color: #e5e9f0;
   }
 
   .tag-path, .social-path, .commit-path {
@@ -33,32 +33,32 @@
   }
 
   .dropdown-button, .dropdown-option {
-    background-color: #fdf6e3;
-    color: #3a94c5;
+    background-color: #e5e9f0;
+    color: #5e81ac;
   }
 
   .dropdown-button:hover, .dropdown-option:hover {
-    background-color: #f4f0d9;
-    color: #f57d26;
+    background-color: #d8dee9;
+    color: #bf616a;
   }
 }
 
 :root[data-theme='nord-polar night'] {
-  --text: red;
-  --background: #2d353b;
+  --text: #e5e9f0;
+  --background: #4c566a;
   --card-foreground: var(--text);
   --muted-foreground: var(--text);
 
   h1 {
-    color: #a7c080;
+    color: #81a1c1;
   }
 
   h2 {
-    color: #e67e80;
+    color: #88c0d0;
   }
 
   h3 {
-    color: #d3c6aa;
+    color: #8fbcbb;
   }
 
   p, a, .project-card {
@@ -70,7 +70,7 @@
   }
 
   .tag {
-    background-color: #343f44;
+    background-color: #434c5e;
   }
 
   .tag-path {
@@ -82,12 +82,12 @@
   }
 
   .dropdown-button, .dropdown-option {
-    background-color: #343f44;
-    color: #7fbbb3;
+    background-color: #434c5e;
+    color: #8fbcbb;
   }
 
   .dropdown-button:hover, .dropdown-option:hover {
-    background-color: #3a464c;
-    color: #e69875;
+    background-color: #3b4252;
+    color: #88c0d0;
   }
 }
