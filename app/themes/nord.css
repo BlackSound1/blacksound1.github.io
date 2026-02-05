@@ -1,0 +1,93 @@
+:root[data-theme='nord-snow storm'] {
+  --text: #4c566a;
+  --background: #eceff4;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #5e81ac;
+  }
+
+  h2 {
+    color: #81a1c1;
+  }
+
+  h3 {
+    color: #88c0d0;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #e5e9f0;
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #e5e9f0;
+    color: #5e81ac;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #d8dee9;
+    color: #bf616a;
+  }
+}
+
+:root[data-theme='nord-polar night'] {
+  --text: #e5e9f0;
+  --background: #4c566a;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #81a1c1;
+  }
+
+  h2 {
+    color: #88c0d0;
+  }
+
+  h3 {
+    color: #8fbcbb;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #434c5e;
+  }
+
+  .tag-path {
+    stroke: var(--text);
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #434c5e;
+    color: #8fbcbb;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #3b4252;
+    color: #88c0d0;
+  }
+}

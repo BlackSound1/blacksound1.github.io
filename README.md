@@ -14,8 +14,9 @@ Deployed At: https://blacksound1-portfolio.vercel.app/
 - My projects
 - A theme selector (themes persist on reload):
   - My own default theme
-  - Catpuccin (4 modes)
-  - Everforest (2 modes)
+  - Catpuccin (4 variants)
+  - Everforest (2 variants)
+  - Nord (2 variants)
 - An accent color picker to choose an arbitrary accent color for the site (persists on reload)
 - A Soundcloud embed of my music. Can be styled by the accent color (persistent on reload). Since styling the Soundcloud embed requires reloading it after sending a request for a different color, there's a checkbox to prevent reloading on style change in case you were listening to a song. Won't re-style the embed until the checkbox is unchecked.
 
