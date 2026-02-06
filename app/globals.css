@@ -1,6 +1,7 @@
 @import url("themes/catpuccin.css");
 @import url("themes/everforest.css");
 @import url("themes/nord.css");
+@import url("themes/gruvbox.css");
 
 @import "tailwindcss";
 @import "tw-animate-css";

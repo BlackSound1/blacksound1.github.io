@@ -1,0 +1,93 @@
+:root[data-theme='gruvbox-light'] {
+  --text: #3c3836;
+  --background: #f9f5d7;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #cc241d;
+  }
+
+  h2 {
+    color: #b16286;
+  }
+
+  h3 {
+    color: #458588;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #fbf1c7;
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #fbf1c7;
+    color: #689d6a;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #f2e5bc;
+    color: #427b58;
+  }
+}
+
+:root[data-theme='gruvbox-dark'] {
+  --text: #ebdbb2;
+  --background: #1d2021;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #fb4934;
+  }
+
+  h2 {
+    color: #d3869b;
+  }
+
+  h3 {
+    color: #83a598;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #434c5e;
+  }
+
+  .tag-path {
+    stroke: var(--text);
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #282828;
+    color: #689d6a;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #32302f;
+    color: #8ec07c;
+  }
+}

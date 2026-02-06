@@ -6,7 +6,6 @@ import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
 import { THEME_VARIANTS, useTheme } from "@/context/ThemeContext";
 import { capitalize } from "@/lib/utils";
 
-const allThemes = Array.from(Object.keys(THEME_VARIANTS));
 
 export default function VariantDropdown(): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,25 +16,6 @@ export default function VariantDropdown(): ReactElement {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-  };
-
-  // Given a variant, figure out which theme it belongs to, then set the theme
-  const handleSelect = (selectedVariant: string) => {
-    let t: string | null = null;
-
-    for (const possibleTheme of allThemes) {
-      if (THEME_VARIANTS[possibleTheme].includes(selectedVariant)) {
-        t = possibleTheme;
-        break;
-      }
-    }
-
-    if (!t) {
-      setTheme('default-default');
-    } else {
-      setTheme(`${t}-${selectedVariant}`);
-    }
-    setIsOpen(false);
   };
 
   // Use the ref to determine if the active element is in the dropdown. If not, close it.
@@ -80,7 +60,10 @@ export default function VariantDropdown(): ReactElement {
                   key={variant}
                   type="button"
                   className="dropdown-option block text-left px-4 py-2 text-sm w-full text-black hover:bg-gray-100"
-                  onClick={() => handleSelect(variant)}
+                  onClick={() => ((selectedVariant: string) => {
+                    setTheme(`${themeOnly}-${selectedVariant}`);
+                    setIsOpen(false);
+                  })(variant)}
                 >
                   {capitalize(variant)}
                 </button>

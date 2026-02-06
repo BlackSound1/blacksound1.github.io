@@ -19,7 +19,7 @@ export default function ThemeDropdown(): ReactElement {
     setIsOpen(!isOpen);
   };
 
-  // When a theme is selected, find its 0th variant and set the theme based on that
+  // When a theme is selected, find its 0th variant and set the variant based on that
   const handleSelect = (selectedTheme: string) => {
     const defaultVariant = THEME_VARIANTS[selectedTheme][0];
     setTheme(`${selectedTheme}-${defaultVariant}`);
