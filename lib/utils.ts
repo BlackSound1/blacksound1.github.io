@@ -102,4 +102,15 @@ export const tagColorMap: Record<string, string[]> = {
     '#bf616a', '#d08770', '#ebcb8b', '#a3be8c',
     '#b48ead'
   ],
+
+  // Gruvbox
+  'gruvbox-light': [
+    '#9d0006', '#79740e', '#b57614', '#076678',
+    '#8f3f71', '#427b58', '#af3a03'
+
+  ],
+  'gruvbox-dark': [
+    '#cc241d', '#b8bb26', '#fabd2f', '#83a598',
+    '#d3869b', '#8ec07c', '#fe8019'
+  ],
 }
