@@ -44,21 +44,21 @@
 }
 
 :root[data-theme='gruvbox-dark'] {
-  --text: red;
-  --background: #4c566a;
+  --text: #ebdbb2;
+  --background: #1d2021;
   --card-foreground: var(--text);
   --muted-foreground: var(--text);
 
   h1 {
-    color: #81a1c1;
+    color: #fb4934;
   }
 
   h2 {
-    color: #88c0d0;
+    color: #d3869b;
   }
 
   h3 {
-    color: #8fbcbb;
+    color: #83a598;
   }
 
   p, a, .project-card {
@@ -82,12 +82,12 @@
   }
 
   .dropdown-button, .dropdown-option {
-    background-color: #434c5e;
-    color: #8fbcbb;
+    background-color: #282828;
+    color: #689d6a;
   }
 
   .dropdown-button:hover, .dropdown-option:hover {
-    background-color: #3b4252;
-    color: #88c0d0;
+    background-color: #32302f;
+    color: #8ec07c;
   }
 }
