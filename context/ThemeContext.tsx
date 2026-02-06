@@ -26,6 +26,7 @@ export const THEME_VARIANTS: Record<string, string[]> = {
   catpuccin: ['latte', 'frappe', 'macchiato', 'mocha'],
   everforest: ['light', 'dark'],
   nord: ['snow storm', 'polar night'],
+  gruvbox: ['light', 'dark'],
 };
 
 /**
