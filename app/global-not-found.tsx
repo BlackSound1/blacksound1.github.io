@@ -45,7 +45,7 @@ export default function GlobalNotFound() {
 
                       <div className="flex justify-center">
                         <h2 className="text-left gap-3 text-2xl font-semibold md:text-3xl font-mono hover:text-accent">
-                          ~404~
+                          [404]
                         </h2>
                       </div>
 
