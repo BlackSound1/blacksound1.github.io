@@ -2,6 +2,7 @@
 @import url("themes/everforest.css");
 @import url("themes/nord.css");
 @import url("themes/gruvbox.css");
+@import url("themes/sonokai.css");
 
 @import "tailwindcss";
 @import "tw-animate-css";

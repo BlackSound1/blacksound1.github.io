@@ -27,6 +27,7 @@ export const THEME_VARIANTS: Record<string, string[]> = {
   everforest: ['light', 'dark'],
   nord: ['snow storm', 'polar night'],
   gruvbox: ['light', 'dark'],
+  sonokai: ['default', 'atlantis', 'andromeda', 'shusia', 'maia', 'espresso'],
 };
 
 /**
