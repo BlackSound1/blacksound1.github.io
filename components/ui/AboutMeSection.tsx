@@ -9,7 +9,9 @@ import SocialLink from './SocialLink';
 export default function AboutMeSection(): ReactElement {
   return (
     <section id="about-me-section" className="space-y-5 px-4 md:px-0">
-      <h1 className="text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>
+      <a href="#">
+        <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>
+      </a>
       <p className="max-w-prose text-lg leading-relaxed">
         I am a developer from Montréal who wants to use technology to improve the world. I have been coding in Python
         for 17 years and have full-stack experience with multiple languages and frameworks. Before getting into tech, I
