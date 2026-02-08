@@ -1,19 +1,19 @@
 :root[data-theme='sonokai-default'] {
-  --text: #4c566a;
-  --background: #eceff4;
+  --text: #e2e2e3;
+  --background: #2c2e34;
   --card-foreground: var(--text);
   --muted-foreground: var(--text);
 
   h1 {
-    color: #5e81ac;
+    color: #ff6077;
   }
 
   h2 {
-    color: #81a1c1;
+    color: #a7df78;
   }
 
   h3 {
-    color: #88c0d0;
+    color: #85d3f2;
   }
 
   p, a, .project-card {
@@ -25,7 +25,7 @@
   }
 
   .tag {
-    background-color: #e5e9f0;
+    background-color: #3b3e48;
   }
 
   .tag-path, .social-path, .commit-path {
@@ -33,13 +33,13 @@
   }
 
   .dropdown-button, .dropdown-option {
-    background-color: #e5e9f0;
-    color: #5e81ac;
+    background-color: #3b3e48;
+    color: #76cce0;
   }
 
   .dropdown-button:hover, .dropdown-option:hover {
-    background-color: #d8dee9;
-    color: #bf616a;
+    background-color: #363944;
+    color: #f39660;
   }
 }
 

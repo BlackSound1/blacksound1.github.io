@@ -116,7 +116,8 @@ export const tagColorMap: Record<string, string[]> = {
 
   // Sonokai
   'sonokai-default': [
-    '',
+    '#ff6077', '#a7df78', '#85d3f2', '#b39df3',
+    '#e7c664', '#f39660'
   ],
   'sonokai-atlantis': [
     '',
