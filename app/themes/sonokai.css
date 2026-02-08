@@ -177,3 +177,48 @@
     color: #ef9062;
   }
 }
+
+:root[data-theme='sonokai-maia'] {
+  --text: #e1e2e3;
+  --background: #273136;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #ff6d7e;
+  }
+
+  h2 {
+    color: #a2e57b;
+  }
+
+  h3 {
+    color: #7cd5f1;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #3a444b;
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #3a444b;
+    color: #7cd5f1;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #353f46;
+    color: #f3a96a;
+  }
+}
