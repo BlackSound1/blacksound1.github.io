@@ -28,6 +28,7 @@ export const THEME_VARIANTS: Record<string, string[]> = {
   nord: ['snow storm', 'polar night'],
   gruvbox: ['light', 'dark'],
   sonokai: ['default', 'atlantis', 'andromeda', 'shusia', 'maia', 'espresso'],
+  dracula: ['alucard', 'dracula'],
 };
 
 /**

@@ -3,6 +3,7 @@
 @import url("themes/nord.css");
 @import url("themes/gruvbox.css");
 @import url("themes/sonokai.css");
+@import url("themes/dracula.css");
 
 @import "tailwindcss";
 @import "tw-animate-css";

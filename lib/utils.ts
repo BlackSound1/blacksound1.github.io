@@ -140,4 +140,14 @@ export const tagColorMap: Record<string, string[]> = {
     '#f0c66f', '#f08d71'
   ],
 
+  // Dracula
+  'dracula-alucard': [
+    '#CB3A2A', '#A34D14', '#846E15', '#14710A',
+    '#036A96', '#644AC9', '#A3144D'
+  ],
+  'dracula-dracula': [
+    '#FF5555', '#FFB86C', '#F1FA8C', '#50FA7B',
+    '#8BE9FD', '#BD93F9', '#FF79C6'
+  ],
+
 }
