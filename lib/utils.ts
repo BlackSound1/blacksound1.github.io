@@ -124,7 +124,8 @@ export const tagColorMap: Record<string, string[]> = {
     '#eacb64', '#f69c5e'
   ],
   'sonokai-andromeda': [
-    '',
+    '#ff6188', '#a9dc76', '#77d5f0', '#bb97ee',
+    '#edc763', '#f89860'
   ],
   'sonokai-shusia': [
     '',
