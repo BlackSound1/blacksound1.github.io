@@ -113,4 +113,31 @@ export const tagColorMap: Record<string, string[]> = {
     '#cc241d', '#b8bb26', '#fabd2f', '#83a598',
     '#d3869b', '#8ec07c', '#fe8019'
   ],
+
+  // Sonokai
+  'sonokai-default': [
+    '#ff6077', '#a7df78', '#85d3f2', '#b39df3',
+    '#e7c664', '#f39660'
+  ],
+  'sonokai-atlantis': [
+    '#ff6d7e', '#a5e179', '#72cce8', '#ba9cf3',
+    '#eacb64', '#f69c5e'
+  ],
+  'sonokai-andromeda': [
+    '#ff6188', '#a9dc76', '#77d5f0', '#bb97ee',
+    '#edc763', '#f89860'
+  ],
+  'sonokai-shusia': [
+    '#ff6188', '#a9dc76', '#78dce8', '#ab9df2',
+    '#e5c463', '#ef9062'
+  ],
+  'sonokai-maia': [
+    '#ff6d7e', '#a2e57b', '#7cd5f1', '#baa0f8',
+    '#e3d367', '#f3a96a'
+  ],
+  'sonokai-espresso': [
+    '#fd6883', '#adda78', '#85dad2', '#9fa0e1',
+    '#f0c66f', '#f08d71'
+  ],
+
 }
