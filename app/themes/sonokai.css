@@ -222,3 +222,48 @@
     color: #f3a96a;
   }
 }
+
+:root[data-theme='sonokai-espresso'] {
+  --text: #e4e3e1;
+  --background: #312c2b;
+  --card-foreground: var(--text);
+  --muted-foreground: var(--text);
+
+  h1 {
+    color: #fd6883;
+  }
+
+  h2 {
+    color: #adda78;
+  }
+
+  h3 {
+    color: #85dad2;
+  }
+
+  p, a, .project-card {
+    color: var(--text);
+  }
+
+  h1:hover, h2:hover, h3:hover, a:hover, .project-card:hover {
+    color: var(--sc-color);
+  }
+
+  .tag {
+    background-color: #49403c;
+  }
+
+  .tag-path, .social-path, .commit-path {
+    stroke: currentColor;
+  }
+
+  .dropdown-button, .dropdown-option {
+    background-color: #49403c;
+    color: #85dad2;
+  }
+
+  .dropdown-button:hover, .dropdown-option:hover {
+    background-color: #413937;
+    color: #f08d71;
+  }
+}
