@@ -57,6 +57,10 @@ section {
   --sc-color: #eb575a;
 
   --radius: 0.625rem;
+
+  .color-checkbox {
+    accent-color: var(--sc-color);
+  }
 }
 
 :root[data-theme='default-default'] {
