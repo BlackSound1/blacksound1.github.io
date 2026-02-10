@@ -32,7 +32,7 @@ export default function ColorPickerSection(): ReactElement {
             <div className="grid grid-rows-2">
               <span>
                 <input
-                  className="mr-2 mb-4 mt-[-4]"
+                  className="color-checkbox mr-2 mb-4 mt-[-4]"
                   type="checkbox"
                   name="sc-color-enable"
                   onClick={() => setChecked(!checked)}
