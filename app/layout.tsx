@@ -39,6 +39,9 @@ export default function RootLayout({
               <AccentProvider>
                 <ColorCheckboxProvider>
                   <ThemeProvider>
+                    <a href="/">
+                      <h1 className="mb-5 text-3xl font-bold md:text-4xl font-mono hover:text-accent">BlackSound1</h1>
+                    </a>
                     {children}
                     <Footer />
                     <SpeedInsights />
