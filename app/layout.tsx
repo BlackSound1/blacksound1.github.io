@@ -40,7 +40,7 @@ export default function RootLayout({
                 <div className="header sticky top-0 z-10 flex items-center justify-between p-5 select-none ">
                   <div></div>
                   <nav className='font-mono'>
-                    <a href="/research">Research</a>
+                    <a className='navitem px-3 transition-colors duration-200' href="/research">Research</a>
                   </nav>
                 </div>
                 <main className="flex-1 px-0 py-8 md:px-5">
