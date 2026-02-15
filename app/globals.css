@@ -9,10 +9,6 @@
 @import "tw-animate-css";
 
 
-section {
-  margin-bottom: 2.5rem;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -58,8 +54,18 @@ section {
 
   --radius: 0.625rem;
 
+  section {
+    margin-bottom: 2.5rem;
+  }
+
   .color-checkbox {
     accent-color: var(--sc-color);
+  }
+
+  .header {
+    mask: linear-gradient(black, black, transparent);
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
   }
 }
 
