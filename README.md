@@ -37,3 +37,4 @@ Deployed At: https://blacksound1-portfolio.vercel.app/
 - PostHog (Analytics)
 - Prettier (Formatter)
 - Just (Command runner)
+- EmbedPDF (PDF viewer)
